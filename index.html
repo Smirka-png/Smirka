@@ -1,195 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Smirka</title>
 
 <style>
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
 }
 
 body {
-    background: radial-gradient(circle at top, #1a0f2e, #0a0618);
-    color: #fff;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top right, rgba(255, 120, 60, 0.25), transparent 35%),
+        radial-gradient(circle at top left, rgba(120, 80, 255, 0.18), transparent 35%),
+        #090614;
+    color: #f8d8a8;
+    font-family: Georgia, "Times New Roman", serif;
     overflow-x: hidden;
 }
 
-/* ✨ Glow Background */
 body::before {
     content: "";
     position: fixed;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255,0,200,0.3), transparent 70%);
-    top: -200px;
-    left: -200px;
-    filter: blur(120px);
-    z-index: -1;
+    inset: 0;
+    background-image:
+        radial-gradient(#f8d8a8 1px, transparent 1px);
+    background-size: 55px 55px;
+    opacity: 0.12;
+    pointer-events: none;
 }
 
-/* NAV */
 nav {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    backdrop-filter: blur(16px);
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 40px;
-    padding: 12px 25px;
+    width: min(900px, 90%);
+    margin: 35px auto;
+    padding: 14px 30px;
+    border: 1px solid rgba(248, 216, 168, 0.25);
+    border-radius: 20px;
+    background: rgba(10, 6, 24, 0.55);
+    backdrop-filter: blur(10px);
     display: flex;
-    gap: 25px;
-    z-index: 100;
+    justify-content: center;
+    gap: 55px;
 }
 
 nav a {
-    color: #ddd;
+    color: #f8d8a8;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     cursor: pointer;
-    transition: 0.3s;
-    position: relative;
+    font-size: 14px;
 }
 
 nav a:hover {
-    color: gold;
+    text-shadow: 0 0 12px #f8b66a;
 }
 
-/* active link glow */
-nav a.active::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: gold;
-    bottom: -5px;
-    left: 0;
-}
-
-/* SECTIONS */
 section {
     display: none;
-    padding: 120px 8%;
-    min-height: 100vh;
-    animation: fade 0.6s ease;
+    width: min(1350px, 92%);
+    margin: 0 auto 60px;
 }
 
 section.active {
     display: block;
 }
 
-@keyframes fade {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-/* HERO */
-.hero {
-    display: flex;
-    gap: 50px;
+.home-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.hero img {
-    width: 320px;
-    border-radius: 20px;
-    transition: 0.4s;
+.hero-image {
+    width: 100%;
+    max-width: 560px;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 45px;
+    border: 1px solid rgba(248, 216, 168, 0.28);
+    box-shadow: 0 0 50px rgba(255, 160, 80, 0.18);
 }
 
-.hero img:hover {
-    transform: scale(1.05);
+.title {
+    font-size: clamp(70px, 10vw, 150px);
+    letter-spacing: 8px;
+    line-height: 0.9;
+    text-shadow: 0 0 25px rgba(248, 182, 106, 0.6);
 }
 
-/* GLASS CARD */
+.subtitle {
+    margin: 18px 0 30px;
+    font-size: 18px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
 .card {
-    backdrop-filter: blur(18px);
-    background: rgba(255,255,255,0.07);
-    border-radius: 20px;
-    padding: 30px;
-    border: 1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 0 40px rgba(255,255,255,0.05);
-    transition: 0.3s;
-}
-
-.card:hover {
-    box-shadow: 0 0 60px rgba(255,255,255,0.15);
-}
-
-/* BUTTON */
-button {
-    margin-top: 20px;
-    padding: 12px 25px;
+    border: 1px solid rgba(248, 216, 168, 0.25);
     border-radius: 25px;
-    border: none;
-    background: rgba(255,255,255,0.1);
-    color: white;
+    background: rgba(12, 8, 28, 0.68);
+    padding: 35px;
+    box-shadow: inset 0 0 35px rgba(255, 180, 100, 0.05);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.card p {
+    line-height: 1.7;
+    color: #ffe6bf;
+}
+
+button {
+    margin-top: 25px;
+    padding: 14px 32px;
+    border-radius: 10px;
+    border: 1px solid rgba(248, 216, 168, 0.45);
+    background: transparent;
+    color: #f8d8a8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     cursor: pointer;
-    transition: 0.3s;
-    backdrop-filter: blur(10px);
 }
 
 button:hover {
-    background: gold;
-    color: black;
-    transform: translateY(-2px);
+    background: rgba(248, 216, 168, 0.12);
 }
 
-/* GRID */
-.grid {
+.socials {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
-    gap: 20px;
-    margin-top: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+    border: 1px solid rgba(248, 216, 168, 0.22);
+    border-radius: 18px;
+    overflow: hidden;
 }
 
-.grid img {
+.socials a {
+    padding: 25px 10px;
+    text-align: center;
+    color: #f8d8a8;
+    text-decoration: none;
+    border-right: 1px solid rgba(248, 216, 168, 0.18);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.socials a:last-child {
+    border-right: none;
+}
+
+.portfolio-preview,
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 25px;
+}
+
+/* WICHTIG: Dadurch bleiben Bilder gleich groß */
+.portfolio-preview img,
+.portfolio-grid img {
     width: 100%;
-    border-radius: 15px;
-    transition: 0.3s;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid rgba(248, 216, 168, 0.25);
+    display: block;
 }
 
-.grid img:hover {
-    transform: scale(1.07);
+.portfolio-grid img {
+    height: 240px;
 }
 
-/* 🌟 STAR (fixed, no flicker) */
-.star {
-    position: fixed;
-    width: 4px;
-    height: 4px;
-    background: white;
-    border-radius: 50%;
-    top: 20%;
-    left: 80%;
-    box-shadow: 0 0 10px white;
-    animation: glow 2s infinite alternate;
+.page-title {
+    font-size: 55px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
-@keyframes glow {
-    from {opacity: 0.3;}
-    to {opacity: 1;}
+.commission {
+    margin-top: 35px;
 }
 
-/* 📱 Responsive */
-@media(max-width: 768px) {
+.commission ul {
+    list-style: none;
+    line-height: 2;
+    color: #ffe6bf;
+}
+
+@media (max-width: 900px) {
     nav {
-        gap: 15px;
-        padding: 10px 15px;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
+    .home-layout {
+        grid-template-columns: 1fr;
     }
 
-    .hero img {
-        width: 80%;
+    .hero-image {
+        height: 420px;
+        max-width: 100%;
+    }
+
+    .portfolio-preview,
+    .portfolio-grid,
+    .socials {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .portfolio-preview,
+    .portfolio-grid,
+    .socials {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-preview img,
+    .portfolio-grid img {
+        height: 220px;
     }
 }
 </style>
@@ -197,72 +237,111 @@ button:hover {
 
 <body>
 
-<div class="star"></div>
-
 <nav>
-    <a onclick="showPage('home', this)" class="active">Home</a>
-    <a onclick="showPage('about', this)">About Me</a>
-    <a onclick="showPage('portfolio', this)">Portfolio</a>
-    <a onclick="showPage('commission', this)">Commission</a>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('portfolio')">Portfolio</a>
+    <a onclick="showPage('commission')">Commission Info</a>
+    <a onclick="showPage('tos')">TOS</a>
+    <a onclick="showPage('about')">About</a>
 </nav>
 
-<!-- HOME -->
 <section id="home" class="active">
-    <div class="hero">
-        <img src="https://via.placeholder.com/300">
-        
-        <div class="card">
-            <h1>SMIRKA</h1>
-            <p>Digital Artist</p>
+    <div class="home-layout">
 
-            <button onclick="showPage('portfolio')">View Portfolio</button>
-        </div>
-    </div>
+        <div>
+            <img class="hero-image" src="HIER-DEIN-HAUPTBILD.jpg" alt="Main Artwork">
 
-    <div class="card" style="margin-top:40px;">
-        <h2>Preview</h2>
-        <div class="grid">
-            <img src="https://via.placeholder.com/200">
-            <img src="https://via.placeholder.com/200">
-            <img src="https://via.placeholder.com/200">
+            <div class="card" style="margin-top: 25px;">
+                <h2>Portfolio ✦</h2>
+
+                <div class="portfolio-preview">
+                    <img src="HIER-BILD-1.jpg" alt="">
+                    <img src="HIER-BILD-2.jpg" alt="">
+                    <img src="HIER-BILD-3.jpg" alt="">
+                    <img src="HIER-BILD-4.jpg" alt="">
+                </div>
+
+                <button onclick="showPage('portfolio')">View Gallery →</button>
+            </div>
         </div>
+
+        <div>
+            <h1 class="title">SMIRKA</h1>
+            <div class="subtitle">Digital Artist & Illustrator</div>
+
+            <div class="card">
+                <h2>Welcome to my creative space!</h2>
+                <p>
+                    I create character art, fanart and original illustrations
+                    with a passion for mood, light and detail.
+                </p>
+
+                <div class="socials">
+                    <a href="#">TikTok</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Toyhouse</a>
+                    <a href="#">VGen</a>
+                </div>
+            </div>
+
+            <div class="card commission">
+                <h2>Commission Info</h2>
+                <ul>
+                    <li>✦ Character art, fanart, OC’s & more</li>
+                    <li>✦ Payments via PayPal</li>
+                    <li>✦ Detailed info in my TOS</li>
+                    <li>✦ Please read before requesting!</li>
+                </ul>
+
+                <button onclick="showPage('tos')">View TOS & Guidelines →</button>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-    <div class="card">
-        <h1>About Me</h1>
-        <p>I’m a digital artist focused on mood, storytelling and character design.</p>
-    </div>
-</section>
-
-<!-- PORTFOLIO -->
 <section id="portfolio">
-    <h1>Portfolio</h1>
-    <div class="grid">
-        <img src="https://via.placeholder.com/300">
-        <img src="https://via.placeholder.com/300">
-        <img src="https://via.placeholder.com/300">
-        <img src="https://via.placeholder.com/300">
+    <h1 class="page-title">Portfolio</h1>
+
+    <div class="portfolio-grid">
+        <img src="HIER-PORTFOLIO-1.jpg" alt="">
+        <img src="HIER-PORTFOLIO-2.jpg" alt="">
+        <img src="HIER-PORTFOLIO-3.jpg" alt="">
+        <img src="HIER-PORTFOLIO-4.jpg" alt="">
+        <img src="HIER-PORTFOLIO-5.jpg" alt="">
+        <img src="HIER-PORTFOLIO-6.jpg" alt="">
     </div>
 </section>
 
-<!-- COMMISSION -->
 <section id="commission">
+    <h1 class="page-title">Commission Info</h1>
     <div class="card">
-        <h1>Commission Info</h1>
-        <p>Open for commissions!</p>
+        <p>Hier kannst du deine Commission-Preise, Regeln und Beispiele einfügen.</p>
+    </div>
+</section>
+
+<section id="tos">
+    <h1 class="page-title">Terms of Service</h1>
+    <div class="card">
+        <p>Hier kommen deine TOS / Regeln hin.</p>
+    </div>
+</section>
+
+<section id="about">
+    <h1 class="page-title">About Me</h1>
+    <div class="card">
+        <p>Dein Text hier.</p>
     </div>
 </section>
 
 <script>
-function showPage(pageId, el) {
-    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
-    document.getElementById(pageId).classList.add("active");
+function showPage(pageId) {
+    document.querySelectorAll("section").forEach(section => {
+        section.classList.remove("active");
+    });
 
-    document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
-    if(el) el.classList.add("active");
+    document.getElementById(pageId).classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 </script>
 
