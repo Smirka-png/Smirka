@@ -6,20 +6,15 @@
 <title>Smirka</title>
 <link rel="stylesheet" href="style.css">
 </head>
- 
+
 <body>
 
-<!-- ✨ STARS -->
 <div class="floating-stars">
-    <span>✦</span><span>✧</span><span>✶</span><span>✦</span>
-    <span>✧</span><span>✶</span><span>✦</span><span>✧</span>
-</div>
-
-<!-- 🌠 SHOOTING STARS -->
-<div class="shooting-stars">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span>✦</span>
+    <span>✧</span>
+    <span>✶</span>
+    <span>✦</span>
+    <span>✧</span>
 </div>
 
 <nav>
@@ -30,40 +25,43 @@
 </nav>
 
 <section id="home" class="active">
+
+    <div class="vgen-wrapper">
+        <a class="big-vgen" href="DEIN-VGEN-LINK" target="_blank">
+            ♡ Commission me on VGen ♡
+        </a>
+    </div>
+
     <div class="home-layout">
 
-        <!-- LEFT -->
         <div>
-            <img class="hero-image zoomable" src="images/IMG_2487.jpg">
+            <img class="hero-image zoomable" src="images/IMG_2487.jpg" alt="Main Artwork">
 
             <div class="card">
                 <h2>Portfolio ✦</h2>
+
                 <div class="portfolio-preview">
-                    <img class="zoomable" src="HIER-BILD-1.jpg">
-                    <img class="zoomable" src="HIER-BILD-2.jpg">
-                    <img class="zoomable" src="HIER-BILD-3.jpg">
-                    <img class="zoomable" src="HIER-BILD-4.jpg">
+                    <img class="zoomable" src="HIER-BILD-1.jpg" alt="">
+                    <img class="zoomable" src="HIER-BILD-2.jpg" alt="">
+                    <img class="zoomable" src="HIER-BILD-3.jpg" alt="">
+                    <img class="zoomable" src="HIER-BILD-4.jpg" alt="">
                 </div>
+
                 <button onclick="showPage('portfolio')">View Gallery →</button>
             </div>
         </div>
 
-        <!-- RIGHT -->
-        <div class="right-top">
+        <div>
             <h1 class="title">SMIRKA</h1>
             <div class="subtitle">Digital Artist</div>
-
-            <a class="big-vgen" href="DEIN-VGEN-LINK" target="_blank">
-                ♡ Commission me on VGen ♡
-            </a>
 
             <div class="card">
                 <p>Welcome to my art space ✦</p>
 
                 <div class="socials">
-                    <a href="#">TikTok</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Toyhouse</a>
+                    <a href="DEIN-TIKTOK-LINK" target="_blank">♪<br>TikTok</a>
+                    <a href="DEIN-INSTAGRAM-LINK" target="_blank">◎<br>Instagram</a>
+                    <a href="DEIN-TOYHOUSE-LINK" target="_blank">✦<br>Toyhouse</a>
                 </div>
             </div>
         </div>
@@ -73,38 +71,72 @@
 
 <section id="portfolio">
     <h1 class="page-title">Portfolio</h1>
+
     <div class="portfolio-grid">
-        <img class="zoomable" src="HIER-PORTFOLIO-1.jpg">
-        <img class="zoomable" src="HIER-PORTFOLIO-2.jpg">
-        <img class="zoomable" src="HIER-PORTFOLIO-3.jpg">
-        <img class="zoomable" src="HIER-PORTFOLIO-4.jpg">
+        <img class="zoomable" src="HIER-PORTFOLIO-1.jpg" alt="">
+        <img class="zoomable" src="HIER-PORTFOLIO-2.jpg" alt="">
+        <img class="zoomable" src="HIER-PORTFOLIO-3.jpg" alt="">
+        <img class="zoomable" src="HIER-PORTFOLIO-4.jpg" alt="">
+        <img class="zoomable" src="HIER-PORTFOLIO-5.jpg" alt="">
+        <img class="zoomable" src="HIER-PORTFOLIO-6.jpg" alt="">
     </div>
 </section>
 
-<!-- MODAL -->
+<section id="commission">
+    <h1 class="page-title">Commission Info</h1>
+    <div class="card">
+        <p>Hier kannst du deine Commission-Preise, Regeln und Beispiele einfügen.</p>
+    </div>
+</section>
+
+<section id="about">
+    <h1 class="page-title">About Me</h1>
+    <div class="card">
+        <p>Dein Text hier.</p>
+    </div>
+</section>
+
 <div id="modal" class="modal">
-    <div class="close" onclick="closeImage()">×</div>
-    <img id="modal-img">
+    <button class="close" onclick="closeImage()">×</button>
+    <img id="modal-img" src="" alt="">
 </div>
 
 <script>
-function showPage(id){
-    document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+function showPage(id) {
+    document.querySelectorAll("section").forEach(section => {
+        section.classList.remove("active");
+    });
+
     document.getElementById(id).classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-document.querySelectorAll(".zoomable").forEach(img=>{
-    img.onclick=()=>openImage(img.src);
+document.querySelectorAll(".zoomable").forEach(img => {
+    img.addEventListener("click", function () {
+        openImage(this.src, this.alt);
+    });
 });
 
-function openImage(src){
-    document.getElementById("modal-img").src=src;
-    document.getElementById("modal").classList.add("show");
+function openImage(src, alt) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+
+    modalImg.src = src;
+    modalImg.alt = alt;
+    modal.classList.add("show");
+    document.body.classList.add("modal-open");
 }
 
-function closeImage(){
+function closeImage() {
     document.getElementById("modal").classList.remove("show");
+    document.body.classList.remove("modal-open");
 }
+
+document.getElementById("modal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeImage();
+    }
+});
 </script>
 
 </body>
