@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smirka</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smirka</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ⭐ Floating Stars -->
 <div class="floating-stars">
     <span>✦</span>
     <span>✧</span>
@@ -20,25 +21,30 @@
 <nav>
     <a onclick="showPage('home')">Home</a>
     <a onclick="showPage('portfolio')">Portfolio</a>
-    <a onclick="showPage('commission')">Commission Info</a>
-    <a onclick="showPage('tos')">TOS</a>
+    <a onclick="showPage('commission')">Commission</a>
     <a onclick="showPage('about')">About</a>
 </nav>
 
 <section id="home" class="active">
+
+    <!-- BIG VGEN BUTTON -->
+    <a class="big-vgen" href="DEIN-VGEN-LINK" target="_blank">
+        ♡ Commission me on VGen ♡
+    </a>
+
     <div class="home-layout">
 
         <div>
-            <img class="hero-image" src="images/IMG_2487.jpg" alt="Main Artwork">
+            <img class="hero-image" src="images/IMG_2487.jpg">
 
-            <div class="card portfolio-card">
+            <div class="card">
                 <h2>Portfolio ✦</h2>
 
                 <div class="portfolio-preview">
-                    <img src="images/IMG_2485.jpg" alt="">
-                    <img src="images/IMG_2488.jpg" alt="">
-                    <img src="images/IMG_2486.jpg" alt="">
-                    <img src="HIER-BILD-4.jpg" alt="">
+                    <img src="HIER-BILD-1.jpg">
+                    <img src="HIER-BILD-2.jpg">
+                    <img src="HIER-BILD-3.jpg">
+                    <img src="HIER-BILD-4.jpg">
                 </div>
 
                 <button onclick="showPage('portfolio')">View Gallery →</button>
@@ -47,84 +53,66 @@
 
         <div>
             <h1 class="title">SMIRKA</h1>
-            <div class="subtitle">Digital Artist & Illustrator</div>
+            <div class="subtitle">Digital Artist</div>
 
             <div class="card">
-                <h2>Welcome to my creative space!</h2>
-                <p>
-                    I create character art, fanart and original illustrations
-                    with a passion for mood, light and detail.
-                </p>
+                <p>Welcome to my art space ✦</p>
 
                 <div class="socials">
-                    <a href="DEIN-TIKTOK-LINK" target="_blank">♪<br>TikTok</a>
-                    <a href="DEIN-INSTAGRAM-LINK" target="_blank">◎<br>Instagram</a>
-                    <a href="DEIN-TOYHOUSE-LINK" target="_blank">✦<br>Toyhouse</a>
+                    <a href="DEIN-TIKTOK-LINK" target="_blank">TikTok</a>
+                    <a href="DEIN-INSTAGRAM-LINK" target="_blank">Instagram</a>
+                    <a href="DEIN-TOYHOUSE-LINK" target="_blank">Toyhouse</a>
                 </div>
-
-                <a class="vgen-button" href="DEIN-VGEN-LINK" target="_blank">
-                    ♡ Commission me on VGen →
-                </a>
             </div>
 
-            <div class="card commission">
-                <h2>Commission Info</h2>
-                <ul>
-                    <li>✦ Character art, fanart, OC’s & more</li>
-                    <li>✦ Payments via PayPal</li>
-                    <li>✦ Detailed info in my TOS</li>
-                    <li>✦ Please read before requesting!</li>
-                </ul>
-
-                <button onclick="showPage('tos')">View TOS & Guidelines →</button>
-            </div>
         </div>
 
     </div>
 </section>
 
 <section id="portfolio">
-    <h1 class="page-title">Portfolio</h1>
+    <h1>Portfolio</h1>
 
     <div class="portfolio-grid">
-        <img src="HIER-PORTFOLIO-1.jpg" alt="">
-        <img src="images/IMG_2488.jpg" alt="">
-        <img src="HIER-PORTFOLIO-3.jpg" alt="">
-        <img src="images/IMG_2486.jpg" alt="">
-        <img src="HIER-PORTFOLIO-5.jpg" alt="">
-        <img src="HIER-PORTFOLIO-6.jpg" alt="">
+        <img src="HIER-PORTFOLIO-1.jpg">
+        <img src="HIER-PORTFOLIO-2.jpg">
+        <img src="HIER-PORTFOLIO-3.jpg">
+        <img src="HIER-PORTFOLIO-4.jpg">
     </div>
 </section>
 
 <section id="commission">
-    <h1 class="page-title">Commission Info</h1>
-    <div class="card">
-        <p>Hier kannst du deine Commission-Preise, Regeln und Beispiele einfügen.</p>
-    </div>
-</section>
-
-<section id="tos">
-    <h1 class="page-title">Terms of Service</h1>
-    <div class="card">
-        <p>Hier kommen deine TOS / Regeln hin.</p>
-    </div>
+    <h1>Commission Info</h1>
 </section>
 
 <section id="about">
-    <h1 class="page-title">About Me</h1>
-    <div class="card">
-        <p>Dein Text hier.</p>
-    </div>
+    <h1>About Me</h1>
 </section>
 
-<script>
-function showPage(pageId) {
-    document.querySelectorAll("section").forEach(section => {
-        section.classList.remove("active");
-    });
+<!-- IMAGE MODAL -->
+<div id="modal" class="modal">
+    <span class="close" onclick="closeImage()">×</span>
+    <img id="modal-img">
+</div>
 
-    document.getElementById(pageId).classList.add("active");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+<script>
+function showPage(id){
+    document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
+/* IMAGE ZOOM */
+document.querySelectorAll("img").forEach(img=>{
+    img.onclick = () => openImage(img.src);
+});
+
+function openImage(src){
+    document.getElementById("modal-img").src = src;
+    document.getElementById("modal").classList.add("show");
+}
+
+function closeImage(){
+    document.getElementById("modal").classList.remove("show");
 }
 </script>
 
