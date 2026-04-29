@@ -10,11 +10,15 @@
 <body>
 
 <div class="floating-stars">
-    <span>✦</span>
-    <span>✧</span>
-    <span>✶</span>
-    <span>✦</span>
-    <span>✧</span>
+    <span>✦</span><span>✧</span><span>✶</span><span>✦</span><span>✧</span>
+    <span>✦</span><span>✧</span><span>✶</span><span>✦</span><span>✧</span>
+    <span>✦</span><span>✧</span>
+</div>
+
+<div class="shooting-stars">
+    <span></span>
+    <span></span>
+    <span></span>
 </div>
 
 <nav>
@@ -26,10 +30,26 @@
 
 <section id="home" class="active">
 
-    <div class="vgen-wrapper">
+    <div class="intro-left">
+        <!-- HIER DEIN GIF EINFÜGEN -->
+        <img class="title-gif" src="images/DEIN-GIF.gif" alt="Decorative GIF">
+
+        <h1 class="title">SMIRKA</h1>
+        <div class="subtitle">Digital Artist</div>
+
         <a class="big-vgen" href="DEIN-VGEN-LINK" target="_blank">
             ♡ Commission me on VGen ♡
         </a>
+
+        <div class="card welcome-card">
+            <p>Welcome to my art space ✦</p>
+
+            <div class="socials">
+                <a href="DEIN-TIKTOK-LINK" target="_blank">♪<br>TikTok</a>
+                <a href="DEIN-INSTAGRAM-LINK" target="_blank">◎<br>Instagram</a>
+                <a href="DEIN-TOYHOUSE-LINK" target="_blank">✦<br>Toyhouse</a>
+            </div>
+        </div>
     </div>
 
     <div class="home-layout">
@@ -48,21 +68,6 @@
                 </div>
 
                 <button onclick="showPage('portfolio')">View Gallery →</button>
-            </div>
-        </div>
-
-        <div>
-            <h1 class="title">SMIRKA</h1>
-            <div class="subtitle">Digital Artist</div>
-
-            <div class="card">
-                <p>Welcome to my art space ✦</p>
-
-                <div class="socials">
-                    <a href="DEIN-TIKTOK-LINK" target="_blank">♪<br>TikTok</a>
-                    <a href="DEIN-INSTAGRAM-LINK" target="_blank">◎<br>Instagram</a>
-                    <a href="DEIN-TOYHOUSE-LINK" target="_blank">✦<br>Toyhouse</a>
-                </div>
             </div>
         </div>
 
@@ -97,7 +102,7 @@
 </section>
 
 <div id="modal" class="modal">
-    <button class="close" onclick="closeImage()">×</button>
+    <button class="close" onclick="closeImage()" aria-label="Close image">×</button>
     <img id="modal-img" src="" alt="">
 </div>
 
