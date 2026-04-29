@@ -19,6 +19,10 @@ body {
     overflow-x: hidden;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 body::before {
     content: "";
     position: fixed;
@@ -43,14 +47,19 @@ body::before {
     }
 }
 
-.floating-stars span {
+.floating-stars {
     position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-stars span {
+    position: absolute;
     color: #f8d8a8;
     font-size: 34px;
     opacity: 0.65;
     text-shadow: 0 0 18px #f8b66a;
-    pointer-events: none;
-    z-index: 1;
     animation: floatStar 5s ease-in-out infinite alternate;
 }
 
@@ -105,7 +114,7 @@ nav {
     gap: 55px;
     box-shadow: 0 0 35px rgba(248, 182, 106, 0.08);
     position: relative;
-    z-index: 5;
+    z-index: 10;
 }
 
 nav a {
@@ -128,7 +137,7 @@ section {
     width: min(1350px, 92%);
     margin: 0 auto 60px;
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
 section.active {
@@ -147,10 +156,18 @@ section.active {
     }
 }
 
+.vgen-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 45px;
+    position: relative;
+    z-index: 20;
+}
+
 .big-vgen {
     display: block;
-    width: min(650px, 95%);
-    margin: 0 auto 45px;
+    width: min(680px, 95%);
     padding: 24px 30px;
     text-align: center;
     border-radius: 25px;
@@ -164,12 +181,17 @@ section.active {
     box-shadow:
         0 0 25px rgba(248, 182, 106, 0.5),
         0 0 60px rgba(255, 140, 90, 0.25);
-    transition: 0.35s ease;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        filter 0.35s ease;
     animation: vgenPulse 2.4s ease-in-out infinite;
+    transform-origin: center;
 }
 
 .big-vgen:hover {
     transform: scale(1.08) translateY(-6px);
+    filter: brightness(1.08);
     box-shadow:
         0 0 35px rgba(248, 216, 168, 0.8),
         0 0 90px rgba(255, 140, 90, 0.5);
@@ -190,7 +212,7 @@ section.active {
 
 .home-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 60px;
     align-items: center;
 }
@@ -205,6 +227,7 @@ section.active {
     box-shadow: 0 0 55px rgba(255, 160, 80, 0.25);
     transition: 0.5s ease;
     cursor: zoom-in;
+    display: block;
 }
 
 .hero-image:hover {
@@ -236,6 +259,8 @@ section.active {
         inset 0 0 35px rgba(255, 180, 100, 0.05),
         0 20px 60px rgba(0, 0, 0, 0.25);
     transition: 0.4s ease;
+    position: relative;
+    z-index: 5;
 }
 
 .card:hover {
@@ -346,32 +371,37 @@ button:hover {
 .modal {
     position: fixed;
     inset: 0;
+    width: 100vw;
+    height: 100dvh;
     background: rgba(5, 3, 15, 0.92);
     backdrop-filter: blur(14px);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 70px 24px 32px;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    z-index: 9999;
-    transition: 0.35s ease;
+    z-index: 99999;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .modal.show {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
 }
 
 .modal img {
     width: auto;
     height: auto;
-    max-width: 92vw;
-    max-height: 88vh;
+    max-width: 94vw;
+    max-height: calc(100dvh - 120px);
     object-fit: contain;
     border-radius: 22px;
     box-shadow: 0 0 70px rgba(248, 182, 106, 0.55);
     transform: scale(0.55);
-    transition: 0.35s ease;
+    transition: transform 0.35s ease;
 }
 
 .modal.show img {
@@ -380,19 +410,21 @@ button:hover {
 
 .close {
     position: fixed;
-    top: 25px;
-    right: 35px;
+    top: max(18px, env(safe-area-inset-top));
+    right: max(18px, env(safe-area-inset-right));
     width: 48px;
     height: 48px;
+    margin: 0;
+    padding: 0;
     border-radius: 50%;
-    background: rgba(12, 8, 28, 0.85);
+    background: rgba(12, 8, 28, 0.9);
     border: 1px solid rgba(248, 216, 168, 0.55);
     color: #f8d8a8;
-    font-size: 38px;
-    line-height: 38px;
+    font-size: 34px;
+    line-height: 44px;
     text-align: center;
     cursor: pointer;
-    z-index: 10000;
+    z-index: 100000;
     transition: 0.3s ease;
 }
 
@@ -427,6 +459,12 @@ button:hover {
 }
 
 @media (max-width: 500px) {
+    nav {
+        width: 92%;
+        padding: 14px;
+        gap: 16px;
+    }
+
     .portfolio-preview,
     .portfolio-grid,
     .socials {
@@ -450,5 +488,24 @@ button:hover {
 
     .subtitle {
         letter-spacing: 3px;
+    }
+
+    .modal {
+        padding: 75px 14px 28px;
+    }
+
+    .modal img {
+        max-width: 94vw;
+        max-height: calc(100dvh - 125px);
+        border-radius: 16px;
+    }
+
+    .close {
+        top: max(14px, env(safe-area-inset-top));
+        right: max(14px, env(safe-area-inset-right));
+        width: 44px;
+        height: 44px;
+        font-size: 32px;
+        line-height: 39px;
     }
 }
