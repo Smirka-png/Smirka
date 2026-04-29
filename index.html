@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body> 
+<body>
 
 <div class="floating-stars">
     <span>✦</span>
@@ -26,11 +26,9 @@
 
 <section id="home" class="active">
 
-    <div class="vgen-wrapper">
-        <a class="big-vgen" href="DEIN-VGEN-LINK" target="_blank">
-            ♡ Commission me on VGen ♡
-        </a>
-    </div>
+    <a class="big-vgen" href="DEIN-VGEN-LINK" target="_blank">
+        ♡ Commission me on VGen ♡
+    </a>
 
     <div class="home-layout">
 
@@ -64,6 +62,7 @@
                     <a href="DEIN-TOYHOUSE-LINK" target="_blank">✦<br>Toyhouse</a>
                 </div>
             </div>
+
         </div>
 
     </div>
@@ -124,12 +123,10 @@ function openImage(src, alt) {
     modalImg.src = src;
     modalImg.alt = alt;
     modal.classList.add("show");
-    document.body.classList.add("modal-open");
 }
 
 function closeImage() {
     document.getElementById("modal").classList.remove("show");
-    document.body.classList.remove("modal-open");
 }
 
 document.getElementById("modal").addEventListener("click", function(e) {
