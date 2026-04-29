@@ -1,1 +1,125 @@
+/* Sterne-Hintergrund */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(#f8d8a8 1px, transparent 1px),
+        radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 45px 45px, 90px 90px;
+    background-position: 0 0, 25px 30px;
+    opacity: 0.18;
+    pointer-events: none;
+    animation: starsMove 35s linear infinite;
+}
 
+@keyframes starsMove {
+    from {
+        background-position: 0 0, 25px 30px;
+    }
+    to {
+        background-position: 300px 300px, 500px 450px;
+    }
+}
+
+/* Schwebende Sterne am Rand */
+body::after {
+    content: "✦        ✧              ✦      ✧";
+    position: fixed;
+    inset: 0;
+    color: #f8d8a8;
+    font-size: 38px;
+    letter-spacing: 80px;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: floatStars 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatStars {
+    from {
+        transform: translateY(0);
+        text-shadow: 0 0 8px #f8b66a;
+    }
+    to {
+        transform: translateY(18px);
+        text-shadow: 0 0 20px #f8b66a;
+    }
+}
+
+/* Social Buttons */
+.socials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.socials a {
+    padding: 22px 10px;
+    text-align: center;
+    color: #f8d8a8;
+    text-decoration: none;
+    border: 1px solid rgba(248, 216, 168, 0.3);
+    border-radius: 16px;
+    background: rgba(255, 216, 168, 0.05);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.35s ease;
+}
+
+.socials .icon {
+    display: block;
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+/* Hover Animation */
+.socials a:hover,
+button:hover,
+.vgen-button:hover {
+    transform: translateY(-6px) scale(1.04);
+    background: rgba(248, 216, 168, 0.15);
+    box-shadow:
+        0 0 18px rgba(248, 182, 106, 0.45),
+        inset 0 0 18px rgba(248, 216, 168, 0.08);
+    text-shadow: 0 0 10px #f8b66a;
+}
+
+/* VGen großer Button */
+.vgen-button {
+    display: block;
+    margin-top: 18px;
+    padding: 18px 25px;
+    text-align: center;
+    color: #0a0618;
+    background: linear-gradient(135deg, #f8d8a8, #f8b66a);
+    border-radius: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: 0.35s ease;
+    box-shadow: 0 0 20px rgba(248, 182, 106, 0.25);
+}
+
+/* Button Animation allgemein */
+button {
+    transition: 0.35s ease;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .socials {
+        grid-template-columns: 1fr;
+    }
+
+    body::after {
+        font-size: 24px;
+        letter-spacing: 35px;
+    }
+}
