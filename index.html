@@ -1,241 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Smirka</title>
-
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100vh;
-    background:
-        radial-gradient(circle at top right, rgba(255, 120, 60, 0.25), transparent 35%),
-        radial-gradient(circle at top left, rgba(120, 80, 255, 0.18), transparent 35%),
-        #090614;
-    color: #f8d8a8;
-    font-family: Georgia, "Times New Roman", serif;
-    overflow-x: hidden;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image:
-        radial-gradient(#f8d8a8 1px, transparent 1px);
-    background-size: 55px 55px;
-    opacity: 0.12;
-    pointer-events: none;
-}
-
-nav {
-    width: min(900px, 90%);
-    margin: 35px auto;
-    padding: 14px 30px;
-    border: 1px solid rgba(248, 216, 168, 0.25);
-    border-radius: 20px;
-    background: rgba(10, 6, 24, 0.55);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    gap: 55px;
-}
-
-nav a {
-    color: #f8d8a8;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-nav a:hover {
-    text-shadow: 0 0 12px #f8b66a;
-}
-
-section {
-    display: none;
-    width: min(1350px, 92%);
-    margin: 0 auto 60px;
-}
-
-section.active {
-    display: block;
-}
-
-.home-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 560px;
-    height: 560px;
-    object-fit: cover;
-    border-radius: 45px;
-    border: 1px solid rgba(248, 216, 168, 0.28);
-    box-shadow: 0 0 50px rgba(255, 160, 80, 0.18);
-}
-
-.title {
-    font-size: clamp(70px, 10vw, 150px);
-    letter-spacing: 8px;
-    line-height: 0.9;
-    text-shadow: 0 0 25px rgba(248, 182, 106, 0.6);
-}
-
-.subtitle {
-    margin: 18px 0 30px;
-    font-size: 18px;
-    letter-spacing: 7px;
-    text-transform: uppercase;
-}
-
-.card {
-    border: 1px solid rgba(248, 216, 168, 0.25);
-    border-radius: 25px;
-    background: rgba(12, 8, 28, 0.68);
-    padding: 35px;
-    box-shadow: inset 0 0 35px rgba(255, 180, 100, 0.05);
-}
-
-.card h2 {
-    margin-bottom: 15px;
-    font-size: 28px;
-}
-
-.card p {
-    line-height: 1.7;
-    color: #ffe6bf;
-}
-
-button {
-    margin-top: 25px;
-    padding: 14px 32px;
-    border-radius: 10px;
-    border: 1px solid rgba(248, 216, 168, 0.45);
-    background: transparent;
-    color: #f8d8a8;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: rgba(248, 216, 168, 0.12);
-}
-
-.socials {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 30px;
-    border: 1px solid rgba(248, 216, 168, 0.22);
-    border-radius: 18px;
-    overflow: hidden;
-}
-
-.socials a {
-    padding: 25px 10px;
-    text-align: center;
-    color: #f8d8a8;
-    text-decoration: none;
-    border-right: 1px solid rgba(248, 216, 168, 0.18);
-    text-transform: uppercase;
-    font-size: 13px;
-}
-
-.socials a:last-child {
-    border-right: none;
-}
-
-.portfolio-preview,
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-top: 25px;
-}
-
-/* WICHTIG: Dadurch bleiben Bilder gleich groß */
-.portfolio-preview img,
-.portfolio-grid img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 14px;
-    border: 1px solid rgba(248, 216, 168, 0.25);
-    display: block;
-}
-
-.portfolio-grid img {
-    height: 240px;
-}
-
-.page-title {
-    font-size: 55px;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-
-.commission {
-    margin-top: 35px;
-}
-
-.commission ul {
-    list-style: none;
-    line-height: 2;
-    color: #ffe6bf;
-}
-
-@media (max-width: 900px) {
-    nav {
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    .home-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-image {
-        height: 420px;
-        max-width: 100%;
-    }
-
-    .portfolio-preview,
-    .portfolio-grid,
-    .socials {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 500px) {
-    .portfolio-preview,
-    .portfolio-grid,
-    .socials {
-        grid-template-columns: 1fr;
-    }
-
-    .portfolio-preview img,
-    .portfolio-grid img {
-        height: 220px;
-    }
-}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smirka</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<div class="floating-stars">
+    <span>✦</span>
+    <span>✧</span>
+    <span>✶</span>
+    <span>✦</span>
+    <span>✧</span>
+</div>
 
 <nav>
     <a onclick="showPage('home')">Home</a>
@@ -251,7 +31,7 @@ button:hover {
         <div>
             <img class="hero-image" src="images/IMG_2487.jpg" alt="Main Artwork">
 
-            <div class="card" style="margin-top: 25px;">
+            <div class="card portfolio-card">
                 <h2>Portfolio ✦</h2>
 
                 <div class="portfolio-preview">
@@ -277,11 +57,14 @@ button:hover {
                 </p>
 
                 <div class="socials">
-                    <a href="#">TikTok</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Toyhouse</a>
-                    <a href="#">VGen</a>
+                    <a href="DEIN-TIKTOK-LINK" target="_blank">♪<br>TikTok</a>
+                    <a href="DEIN-INSTAGRAM-LINK" target="_blank">◎<br>Instagram</a>
+                    <a href="DEIN-TOYHOUSE-LINK" target="_blank">✦<br>Toyhouse</a>
                 </div>
+
+                <a class="vgen-button" href="DEIN-VGEN-LINK" target="_blank">
+                    ♡ Commission me on VGen →
+                </a>
             </div>
 
             <div class="card commission">
