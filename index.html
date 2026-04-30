@@ -9,6 +9,18 @@
 <body>
 
   <div class="stars"></div>
+
+  <div class="floating-symbols">
+    <span>✦</span>
+    <span>☆</span>
+    <span>✧</span>
+    <span>⋆</span>
+    <span>✶</span>
+    <span>✩</span>
+    <span>☄</span>
+    <span>✷</span>
+  </div>
+
   <div class="shooting-star star-one"></div>
   <div class="shooting-star star-two"></div>
   <div class="shooting-star star-three"></div>
@@ -31,16 +43,21 @@
     <section id="home" class="tab-page active">
       <div class="home-layout">
         <div class="left-column">
-          <img class="main-art open-image" src="images/IMG_2487.jpg" alt="Profilbild">
+          <img class="main-art open-image" src="images/profile.jpg" alt="Profilbild" data-credit="Profile art by: ARTIST NAME">
 
           <div class="portfolio-preview glass-box">
             <h2>Portfolio ✦</h2>
+
             <div class="mini-grid">
-              <img class="open-image" src="images/IMG_2487.jpg" alt="">
-              <img class="open-image" src="images/anime2.jpg" alt="">
-              <img class="open-image" src="images/semi1.jpg" alt="">
-              <img class="open-image" src="images/assets1.jpg" alt="">
+              <img class="open-image" src="images/anime1.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
+              <img class="open-image" src="images/anime2.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
+              <img class="open-image" src="images/semi1.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
+              <img class="open-image" src="images/assets1.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
             </div>
+
+            <button class="see-more-btn" data-tab-target="portfolio">
+              See more examples ✦
+            </button>
           </div>
         </div>
 
@@ -57,7 +74,7 @@
           <div class="slots-box glass-box">
             <h2>Commission Slots</h2>
             <p class="slot-number">3 / 5 OPEN</p>
-            <p>animation closed</p>
+            <p>Aktuell sind noch 3 Slots verfügbar.</p>
           </div>
 
           <div class="welcome-box glass-box">
@@ -97,22 +114,22 @@
 
         <div class="process-grid">
           <div class="process-card">
-            <img class="open-image" src="images/sketch.jpg" alt="Sketch">
+            <img class="open-image" src="images/sketch.jpg" alt="Sketch" data-credit="Process image: Sketch by SMIRKA">
             <h3>Sketch</h3>
           </div>
 
           <div class="process-card">
-            <img class="open-image" src="images/lineart.jpg" alt="Lineart">
+            <img class="open-image" src="images/lineart.jpg" alt="Lineart" data-credit="Process image: Lineart by SMIRKA">
             <h3>Lineart</h3>
           </div>
 
           <div class="process-card">
-            <img class="open-image" src="images/render.jpg" alt="Render">
+            <img class="open-image" src="images/render.jpg" alt="Render" data-credit="Process image: Render by SMIRKA">
             <h3>Render</h3>
           </div>
 
           <div class="process-card">
-            <img class="open-image" src="images/overlays.jpg" alt="Overlays">
+            <img class="open-image" src="images/overlays.jpg" alt="Overlays" data-credit="Process image: Overlays by SMIRKA">
             <h3>Overlays</h3>
           </div>
         </div>
@@ -130,17 +147,17 @@
         </div>
 
         <div class="portfolio-grid">
-          <img class="portfolio-item anime open-image" src="images/anime1.jpg" alt="">
-          <img class="portfolio-item anime open-image" src="images/anime2.jpg" alt="">
-          <img class="portfolio-item anime open-image" src="images/anime3.jpg" alt="">
+          <img class="portfolio-item anime open-image" src="images/anime1.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
+          <img class="portfolio-item anime open-image" src="images/anime2.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
+          <img class="portfolio-item anime open-image" src="images/anime3.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
 
-          <img class="portfolio-item semi open-image" src="images/semi1.jpg" alt="">
-          <img class="portfolio-item semi open-image" src="images/semi2.jpg" alt="">
-          <img class="portfolio-item semi open-image" src="images/semi3.jpg" alt="">
+          <img class="portfolio-item semi open-image" src="images/semi1.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
+          <img class="portfolio-item semi open-image" src="images/semi2.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
+          <img class="portfolio-item semi open-image" src="images/semi3.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
 
-          <img class="portfolio-item assets open-image" src="images/assets1.jpg" alt="">
-          <img class="portfolio-item assets open-image" src="images/assets2.jpg" alt="">
-          <img class="portfolio-item assets open-image" src="images/assets3.jpg" alt="">
+          <img class="portfolio-item assets open-image" src="images/assets1.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
+          <img class="portfolio-item assets open-image" src="images/assets2.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
+          <img class="portfolio-item assets open-image" src="images/assets3.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
         </div>
       </div>
     </section>
@@ -175,7 +192,7 @@
 
     <section id="about" class="tab-page">
       <div class="content-card about-layout">
-        <img class="about-pic open-image" src="images/profile.jpg" alt="Profilbild">
+        <img class="about-pic open-image" src="images/profile.jpg" alt="Profilbild" data-credit="Profile art by: ARTIST NAME">
 
         <div>
           <h2>About Me</h2>
@@ -190,11 +207,18 @@
     </section>
 
     <section id="nda" class="tab-page">
-      <div class="content-card">
+      <div class="content-card nda-card">
         <h2>NDA</h2>
 
-        <div class="nda-scroll">
-          <img class="open-image" src="images/IMG_2487.jpg" alt="NDA Vertrag">
+        <div class="nda-stage">
+          <div class="nda-orbit orbit-one"></div>
+          <div class="nda-orbit orbit-two"></div>
+
+          <div class="nda-scroll">
+            <div class="scroll-rod top-rod"></div>
+            <img class="open-image" src="images/nda-contract.jpg" alt="NDA Vertrag" data-credit="NDA contract document">
+            <div class="scroll-rod bottom-rod"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -203,20 +227,21 @@
       <div class="content-card">
         <h2>Extras</h2>
 
-        <div class="extras-grid">
-          <div class="extra-card">
-            <img src="images/dein-gif.gif" alt="gif">
-            <h3>GIF Decoration</h3>
+        <div class="extras-layout">
+          <div class="side-pngs">
+            <img src="images/extra-left-1.png" alt="">
+            <img src="images/extra-left-2.png" alt="">
+            <img src="images/extra-left-3.png" alt="">
           </div>
 
-          <div class="extra-card">
-            <img src="images/dein-gif2.gif" alt="gif">
-            <h3>Extra GIF</h3>
+          <div class="center-card-png">
+            <img class="open-image" src="images/extra-card.png" alt="Extra Karte" data-credit="Extra card by SMIRKA">
           </div>
 
-          <div class="extra-card">
-            <h3>Add-ons</h3>
-            <p>Backgrounds, props, commercial rights, extra character.</p>
+          <div class="side-pngs">
+            <img src="images/extra-right-1.png" alt="">
+            <img src="images/extra-right-2.png" alt="">
+            <img src="images/extra-right-3.png" alt="">
           </div>
         </div>
       </div>
@@ -226,20 +251,39 @@
 
   <div class="image-modal" id="imageModal">
     <button class="close-modal" id="closeModal">×</button>
-    <img id="modalImage" src="" alt="">
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="">
+      <p id="modalCredit"></p>
+    </div>
   </div>
 
   <script>
     const tabButtons = document.querySelectorAll(".tab-btn");
     const pages = document.querySelectorAll(".tab-page");
 
+    function openTab(tabName) {
+      tabButtons.forEach(btn => btn.classList.remove("active"));
+      pages.forEach(page => page.classList.remove("active"));
+
+      const targetButton = document.querySelector(`[data-tab="${tabName}"]`);
+      const targetPage = document.getElementById(tabName);
+
+      if (targetButton && targetPage) {
+        targetButton.classList.add("active");
+        targetPage.classList.add("active");
+      }
+    }
+
     tabButtons.forEach(button => {
       button.addEventListener("click", () => {
-        tabButtons.forEach(btn => btn.classList.remove("active"));
-        pages.forEach(page => page.classList.remove("active"));
+        openTab(button.dataset.tab);
+      });
+    });
 
-        button.classList.add("active");
-        document.getElementById(button.dataset.tab).classList.add("active");
+    document.querySelectorAll("[data-tab-target]").forEach(button => {
+      button.addEventListener("click", () => {
+        openTab(button.dataset.tabTarget);
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
     });
 
@@ -265,17 +309,20 @@
 
     const modal = document.getElementById("imageModal");
     const modalImage = document.getElementById("modalImage");
+    const modalCredit = document.getElementById("modalCredit");
     const closeModal = document.getElementById("closeModal");
 
     document.querySelectorAll(".open-image").forEach(image => {
       image.addEventListener("click", () => {
         modalImage.src = image.src;
+        modalCredit.textContent = image.dataset.credit || "";
         modal.classList.add("active");
         document.body.classList.add("modal-open");
       });
     });
 
     closeModal.addEventListener("click", closeImage);
+
     modal.addEventListener("click", event => {
       if (event.target === modal) closeImage();
     });
@@ -283,6 +330,8 @@
     function closeImage() {
       modal.classList.remove("active");
       document.body.classList.remove("modal-open");
+      modalImage.src = "";
+      modalCredit.textContent = "";
     }
   </script>
 
