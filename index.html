@@ -1,153 +1,166 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Smirka</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commission Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="floating-stars">
-    <span>✦</span><span>✧</span><span>✶</span><span>✦</span><span>✧</span>
-    <span>✦</span><span>✧</span><span>✶</span><span>✦</span><span>✧</span>
-    <span>✦</span><span>✧</span>
-</div>
-
-<div class="shooting-stars">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-
-<nav>
-    <a onclick="showPage('home')">Home</a>
-    <a onclick="showPage('portfolio')">Portfolio</a>
-    <a onclick="showPage('commission')">Commission</a>
-    <a onclick="showPage('about')">About me</a>
-</nav>
-
-<section id="home" class="active">
-
-    <div class="intro-left">
-        <!-- HIER DEIN GIF EINFÜGEN -->
-        <img class="title-gif" src="images/gif star.gif" alt="Decorative GIF">
-
-        <h1 class="title">SMIRKA</h1>
-        <div class="subtitle">Digital Artist</div>
-
-        <a class="big-vgen" href="https://vgen.co/Smirka" target="_blank">
-            ♡ Commission on VGen ♡
-        </a>
-
-        <div class="card welcome-card">
-            <p>Welcome to my art space ✦</p>
-
-            <div class="socials">
-                <a href="https://www.tiktok.com/@smirka_png" target="_blank">♪<br>TikTok</a>
-                <a href="https://www.instagram.com/smirka_png?igsh=aHRxaTh3OTYzaGF5&utm_source=qr" target="_blank">◎<br>Instagram</a>
-                <a href="DEIN-TOYHOUSE-LINK" target="_blank">✦<br>Toyhouse</a>
-            </div>
-        </div>
+    <div class="parallax-bg">
+        <div class="parallax-layer layer-one"></div>
+        <div class="parallax-layer layer-two"></div>
+        <div class="parallax-layer layer-three"></div>
     </div>
 
-    <div class="home-layout">
+    <header>
+        <nav class="navbar">
+            <div class="logo">Your Art</div>
 
-        <div>
-            <img class="hero-image zoomable" src="images/IMG_2487.jpg" alt="Main Artwork">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#nda">NDA</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <div class="card">
-                <h2>Portfolio ✦</h2>
+    <main>
 
-                <div class="portfolio-preview">
-                    <img class="zoomable" src="images/IMG_2489.jpg" alt="">
-                    <img class="zoomable" src="images/IMG_2485.jpg" alt="">
-                    <img class="zoomable" src="images/IMG_2488.jpg" alt="">
-                    <img class="zoomable" src="images/IMG_2486.jpg" alt="">
+        <section id="home" class="section hero">
+            <div class="hero-content">
+                <h1>Commissions Open</h1>
+                <p>Fantasy, anime, semi-realistic artwork and custom assets.</p>
+
+                <div class="slots-box">
+                    <h2>Slots Open</h2>
+                    <div class="slot-number">3 / 5</div>
+                    <p>Aktuell sind noch 3 Commission Slots verfügbar.</p>
+                </div>
+            </div>
+
+            <div class="preview-card">
+                <div class="preview-image">
+                    Preview Artwork
+                </div>
+                <h3>Featured Artwork</h3>
+                <p>Hier bleibt dein Main-Preview wie vorher.</p>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <h2 class="section-title">Commission Process</h2>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <img src="images/sketch.jpg" alt="Sketch">
+                    <h3>Sketch</h3>
+                    <p>Erste grobe Idee und Pose.</p>
                 </div>
 
-                <button onclick="showPage('portfolio')">View Gallery →</button>
+                <div class="process-card">
+                    <img src="images/lineart.jpg" alt="Lineart">
+                    <h3>Lineart</h3>
+                    <p>Saubere Linien und Details.</p>
+                </div>
+
+                <div class="process-card">
+                    <img src="images/render.jpg" alt="Render">
+                    <h3>Render</h3>
+                    <p>Farben, Schatten und Licht.</p>
+                </div>
+
+                <div class="process-card">
+                    <img src="images/overlays.jpg" alt="Overlays">
+                    <h3>Overlays</h3>
+                    <p>Finale Effekte und Atmosphäre.</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-    </div>
-</section>
+        <section id="portfolio" class="section">
+            <h2 class="section-title">Portfolio</h2>
 
-<section id="portfolio">
-    <h1 class="page-title">Portfolio</h1>
+            <div class="category-tabs">
+                <button class="category-btn active" data-category="anime">Anime</button>
+                <button class="category-btn" data-category="semi">Semi Realismus</button>
+                <button class="category-btn" data-category="assets">Assets</button>
+            </div>
 
-    <div class="portfolio-grid">
-        <img class="zoomable" src="images/IMG_2489.jpg" alt="">
-        <img class="zoomable" src="images/IMG_2485.jpg" alt="">
-        <img class="zoomable" src="images/IMG_2488.jpg" alt="">
-        <img class="zoomable" src="images/IMG_2486.jpg" alt="">
-        <img class="zoomable" src="HIER-PORTFOLIO-5.jpg" alt="">
-        <img class="zoomable" src="HIER-PORTFOLIO-6.jpg" alt="">
-    </div>
-</section>
+            <div class="portfolio-grid">
+                <div class="portfolio-item anime">
+                    <img src="images/anime1.jpg" alt="Anime Artwork">
+                    <p>Anime Artwork</p>
+                </div>
 
-<section id="commission">
-    <h1 class="page-title">Commission Info</h1>
-    <div class="card">
-        <p>price </p>
-    </div>
-</section>
+                <div class="portfolio-item anime">
+                    <img src="images/anime2.jpg" alt="Anime Artwork">
+                    <p>Anime Artwork</p>
+                </div>
 
-<section id="about">
-    <h1 class="page-title">About Me</h1>
-    <div class="card">
-        <p>✧ 18 years old
-✧ Currently still in school
-✧ Aspiring art student (saving up for art university)
-✧ Doing art commissions online 
-✧ Working to pay for my own apartment
-✧ Feel free to message me if you have any questions or commission ideas ✧</p>
-    </div>
-</section>
+                <div class="portfolio-item semi">
+                    <img src="images/semi1.jpg" alt="Semi Realismus Artwork">
+                    <p>Semi Realismus</p>
+                </div>
 
-<div id="modal" class="modal">
-    <button class="close" onclick="closeImage()" aria-label="Close image">×</button>
-    <img id="modal-img" src="" alt="">
-</div>
+                <div class="portfolio-item semi">
+                    <img src="images/semi2.jpg" alt="Semi Realismus Artwork">
+                    <p>Semi Realismus</p>
+                </div>
 
-<script>
-function showPage(id) {
-    document.querySelectorAll("section").forEach(section => {
-        section.classList.remove("active");
-    });
+                <div class="portfolio-item assets">
+                    <img src="images/assets1.jpg" alt="Asset">
+                    <p>Asset</p>
+                </div>
 
-    document.getElementById(id).classList.add("active");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
+                <div class="portfolio-item assets">
+                    <img src="images/assets2.jpg" alt="Asset">
+                    <p>Asset</p>
+                </div>
+            </div>
+        </section>
 
-document.querySelectorAll(".zoomable").forEach(img => {
-    img.addEventListener("click", function () {
-        openImage(this.src, this.alt);
-    });
-});
+        <section id="nda" class="section nda-section">
+            <h2 class="section-title">NDA</h2>
 
-function openImage(src, alt) {
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modal-img");
+            <div class="nda-wrapper">
+                <div class="nda-scroll">
+                    <img src="images/nda-contract.jpg" alt="NDA Vertrag">
+                </div>
+            </div>
+        </section>
 
-    modalImg.src = src;
-    modalImg.alt = alt;
-    modal.classList.add("show");
-    document.body.classList.add("modal-open");
-}
+    </main>
 
-function closeImage() {
-    document.getElementById("modal").classList.remove("show");
-    document.body.classList.remove("modal-open");
-}
+    <script>
+        const buttons = document.querySelectorAll(".category-btn");
+        const items = document.querySelectorAll(".portfolio-item");
 
-document.getElementById("modal").addEventListener("click", function(e) {
-    if (e.target === this) {
-        closeImage();
-    }
-});
-</script>
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                buttons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                const category = button.dataset.category;
+
+                items.forEach(item => {
+                    if (item.classList.contains(category)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        items.forEach(item => {
+            if (!item.classList.contains("anime")) {
+                item.style.display = "none";
+            }
+        });
+    </script>
 
 </body>
 </html>
