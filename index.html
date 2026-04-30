@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMIRKA | Digital Artist</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -17,8 +17,8 @@
     <span>⋆</span>
     <span>✶</span>
     <span>✩</span>
-    <span>☄</span>
     <span>✷</span>
+    <span>☄</span>
   </div>
 
   <div class="shooting-star star-one"></div>
@@ -42,6 +42,7 @@
 
     <section id="home" class="tab-page active">
       <div class="home-layout">
+
         <div class="left-column">
           <img class="main-art open-image" src="images/profile.jpg" alt="Profilbild" data-credit="Profile art by: ARTIST NAME">
 
@@ -55,9 +56,7 @@
               <img class="open-image" src="images/assets1.jpg" alt="" data-credit="Credits: Artist Name / Character Owner">
             </div>
 
-            <button class="see-more-btn" data-tab-target="portfolio">
-              See more examples ✦
-            </button>
+            <button class="see-more-btn" data-tab-target="portfolio">See more examples ✦</button>
           </div>
         </div>
 
@@ -79,10 +78,7 @@
 
           <div class="welcome-box glass-box">
             <h3>Welcome to my art space ✦</h3>
-            <p>
-              Hier findest du mein Portfolio, Preise, Commission Process,
-              TOS, NDA und Extras.
-            </p>
+            <p>Hier findest du mein Portfolio, Preise, Commission Process, TOS, NDA und Extras.</p>
 
             <div class="social-links">
               <a href="DEIN_TIKTOK_LINK" target="_blank">TikTok</a>
@@ -91,14 +87,13 @@
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
     <section id="tos" class="tab-page">
       <div class="content-card">
         <h2>TOS</h2>
-        <p>Hier kommen deine Terms of Service rein.</p>
-
         <ul>
           <li>Payment before final render.</li>
           <li>No refunds after sketch approval.</li>
@@ -114,22 +109,22 @@
 
         <div class="process-grid">
           <div class="process-card">
-            <img class="open-image" src="images/sketch.jpg" alt="Sketch" data-credit="Process image: Sketch by SMIRKA">
+            <img class="open-image" src="images/sketch.jpg" alt="Sketch" data-credit="Process: Sketch by SMIRKA">
             <h3>Sketch</h3>
           </div>
 
           <div class="process-card">
-            <img class="open-image" src="images/lineart.jpg" alt="Lineart" data-credit="Process image: Lineart by SMIRKA">
+            <img class="open-image" src="images/lineart.jpg" alt="Lineart" data-credit="Process: Lineart by SMIRKA">
             <h3>Lineart</h3>
           </div>
 
           <div class="process-card">
-            <img class="open-image" src="images/render.jpg" alt="Render" data-credit="Process image: Render by SMIRKA">
+            <img class="open-image" src="images/render.jpg" alt="Render" data-credit="Process: Render by SMIRKA">
             <h3>Render</h3>
           </div>
 
           <div class="process-card">
-            <img class="open-image" src="images/overlays.jpg" alt="Overlays" data-credit="Process image: Overlays by SMIRKA">
+            <img class="open-image" src="images/overlays.jpg" alt="Overlays" data-credit="Process: Overlays by SMIRKA">
             <h3>Overlays</h3>
           </div>
         </div>
@@ -201,7 +196,7 @@
             Ich zeichne Anime, Semi Realismus, Character Art und Assets.
           </p>
 
-          <img class="small-gif" src="images/dein-gif.gif" alt="gif">
+          <img class="small-gif" src="images/dein-gif.gif" alt="GIF">
         </div>
       </div>
     </section>
@@ -277,6 +272,7 @@
     tabButtons.forEach(button => {
       button.addEventListener("click", () => {
         openTab(button.dataset.tab);
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
     });
 
@@ -324,7 +320,9 @@
     closeModal.addEventListener("click", closeImage);
 
     modal.addEventListener("click", event => {
-      if (event.target === modal) closeImage();
+      if (event.target === modal) {
+        closeImage();
+      }
     });
 
     function closeImage() {
