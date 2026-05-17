@@ -15,6 +15,9 @@
 </head>
 
 <body>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
 
 <header class="top-header">
 
@@ -62,7 +65,7 @@ alt="Profilbild">
 
 <div class="portfolio-preview glass-box">
 
-<h2>Portfolio ✦</h2>
+<h2>Portfolio â¦</h2>
 
 <div class="mini-grid">
 
@@ -94,7 +97,7 @@ alt="">
 
 <button class="see-more-btn">
 
-See more examples ✦
+See more examples â¦
 
 </button>
 
@@ -108,7 +111,7 @@ See more examples ✦
 
 <h1>SMIRKA</h1>
 
-<p>DIGITAL ARTIST · FREELANCER</p>
+<p>DIGITAL ARTIST Â· FREELANCER</p>
 
 </div>
 
@@ -118,7 +121,7 @@ href="https://vgen.co/Smirka"
 
 target="_blank">
 
-♡ COMMISSION ME ON VGEN ♡
+â¡ COMMISSION ME ON VGEN â¡
 
 </a>
 
@@ -134,7 +137,7 @@ target="_blank">
 
 <div class="welcome-box glass-box">
 
-<h3>Welcome to my art space ✦</h3>
+<h3>Welcome to my art space â¦</h3>
 
 <p>
 
@@ -220,7 +223,7 @@ alt="TOS PNG">
 
 <h2>Commission Process</h2>
 
-<div class="process-grid">
+<div class="process-vertical">
 
 <div class="process-card">
 
@@ -284,43 +287,36 @@ alt="TOS PNG">
 
 <h2>Portfolio</h2>
 
-<div class="portfolio-grid">
+<div class="category-tabs">
+<button class="category-btn active-category" data-category="anime">Anime Style</button>
+<button class="category-btn" data-category="semi">Semi Realism Style</button>
+</div>
 
-<img class="portfolio-item"
+<div class="portfolio-grid anime-gallery">
 
-src="images/anime1.jpg"
+<img class="portfolio-item open-image" src="images/anime1.jpg" alt="">
+<img class="portfolio-item open-image" src="images/anime2.jpg" alt="">
+<img class="portfolio-item open-image" src="images/anime3.jpg" alt="">
+<img class="portfolio-item open-image" src="images/anime4.jpg" alt="">
+<img class="portfolio-item open-image" src="images/anime5.jpg" alt="">
+<img class="portfolio-item open-image" src="images/anime6.jpg" alt="">
+<img class="portfolio-item open-image" src="images/anime7.jpg" alt="">
+<img class="portfolio-item open-image" src="images/anime8.jpg" alt="">
+<img class="portfolio-item open-image" src="images/anime9.jpg" alt="">
 
-alt="">
+</div>
 
-<img class="portfolio-item"
+<div class="portfolio-grid semi-gallery hidden-gallery">
 
-src="images/anime2.jpg"
-
-alt="">
-
-<img class="portfolio-item"
-
-src="images/anime3.jpg"
-
-alt="">
-
-<img class="portfolio-item"
-
-src="images/realismus.jpg"
-
-alt="">
-
-<img class="portfolio-item"
-
-src="images/realismus1.jpg"
-
-alt="">
-
-<img class="portfolio-item"
-
-src="images/semi3.jpg"
-
-alt="">
+<img class="portfolio-item open-image" src="images/realismus.jpg" alt="">
+<img class="portfolio-item open-image" src="images/realismus1.jpg" alt="">
+<img class="portfolio-item open-image" src="images/semi3.jpg" alt="">
+<img class="portfolio-item open-image" src="images/semi4.jpg" alt="">
+<img class="portfolio-item open-image" src="images/semi5.jpg" alt="">
+<img class="portfolio-item open-image" src="images/semi6.jpg" alt="">
+<img class="portfolio-item open-image" src="images/semi7.jpg" alt="">
+<img class="portfolio-item open-image" src="images/semi8.jpg" alt="">
+<img class="portfolio-item open-image" src="images/semi9.jpg" alt="">
 
 </div>
 
@@ -342,7 +338,7 @@ alt="">
 
 <h3>Illustration</h3>
 
-<p class="price">ab 30€</p>
+<p class="price">ab 30â¬</p>
 
 </div>
 
@@ -350,7 +346,7 @@ alt="">
 
 <h3>Semi realism</h3>
 
-<p class="price">ab 70€</p>
+<p class="price">ab 70â¬</p>
 
 </div>
 
@@ -358,7 +354,7 @@ alt="">
 
 <h3>Fullbody</h3>
 
-<p class="price">ab 120€</p>
+<p class="price">ab 120â¬</p>
 
 </div>
 
@@ -382,7 +378,7 @@ alt="">
 
 <div class="content-card">
 
-<h2>SOON ✦</h2>
+<h2>SOON â¦</h2>
 
 <div class="soon-grid">
 
@@ -442,13 +438,13 @@ and behind the scenes is coming soon.
 
 <div class="content-card coffee-card">
 
-<h2>Buy Me A Coffee ✦</h2>
+<h2>Buy Me A Coffee â¦</h2>
 
 <p>
 
 If you want to support my art journey,
 
-you can donate here ♡
+you can donate here â¡
 
 </p>
 
@@ -586,28 +582,79 @@ alt="Extra Karte">
 
 </main>
 
+
+<div class="image-modal" id="imageModal">
+<button class="close-modal">â</button>
+<img id="modalImage" src="" alt="Expanded Image">
+</div>
+
 <script>
 
 const tabs = document.querySelectorAll(".tab-btn");
-
 const pages = document.querySelectorAll(".tab-page");
 
 tabs.forEach(tab => {
-
 tab.addEventListener("click", () => {
-
 const target = tab.dataset.tab;
 
 tabs.forEach(btn => btn.classList.remove("active"));
-
 pages.forEach(page => page.classList.remove("active"));
 
 tab.classList.add("active");
-
 document.getElementById(target).classList.add("active");
-
+});
 });
 
+// SEE MORE BUTTON
+document.querySelector(".see-more-btn").addEventListener("click", () => {
+tabs.forEach(btn => btn.classList.remove("active"));
+pages.forEach(page => page.classList.remove("active"));
+
+document.querySelector('[data-tab="portfolio"]').classList.add("active");
+document.getElementById("portfolio").classList.add("active");
+});
+
+// IMAGE MODAL
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const openImages = document.querySelectorAll(".open-image, .portfolio-item");
+const closeModal = document.querySelector(".close-modal");
+
+openImages.forEach(img => {
+img.addEventListener("click", () => {
+modal.classList.add("active");
+modalImg.src = img.src;
+});
+});
+
+closeModal.addEventListener("click", () => {
+modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+if(e.target === modal){
+modal.classList.remove("active");
+}
+});
+
+// PORTFOLIO SWITCH
+const categoryBtns = document.querySelectorAll(".category-btn");
+const animeGallery = document.querySelector(".anime-gallery");
+const semiGallery = document.querySelector(".semi-gallery");
+
+categoryBtns.forEach(btn => {
+btn.addEventListener("click", () => {
+categoryBtns.forEach(b => b.classList.remove("active-category"));
+btn.classList.add("active-category");
+
+if(btn.dataset.category === "anime"){
+animeGallery.classList.remove("hidden-gallery");
+semiGallery.classList.add("hidden-gallery");
+}else{
+semiGallery.classList.remove("hidden-gallery");
+animeGallery.classList.add("hidden-gallery");
+}
+});
 });
 
 </script>
