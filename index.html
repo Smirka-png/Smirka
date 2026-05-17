@@ -16,6 +16,22 @@
 
 <body>
 
+<!-- MODAL -->
+
+<div class="image-modal" id="imageModal">
+
+<button class="close-modal" id="closeModal">✕</button>
+
+<div class="modal-content">
+
+<img id="modalImage" src="" alt="">
+
+<p id="modalCredit"></p>
+
+</div>
+
+</div>
+
 <header class="top-header">
 
 <nav class="nav-tabs">
@@ -36,7 +52,7 @@
 
 <button class="tab-btn" data-tab="soon">Soon</button>
 
-<button class="tab-btn" data-tab="coffee">Buy me a coffee</button>
+<button class="tab-btn" data-tab="coffee">Coffee</button>
 
 <button class="tab-btn" data-tab="about">About</button>
 
@@ -58,7 +74,9 @@
 
 src="images/profilbild.jpg"
 
-alt="Profilbild">
+alt="Profilbild"
+
+data-credit="Profile art by: SMIRKA">
 
 <div class="portfolio-preview glass-box">
 
@@ -70,33 +88,35 @@ alt="Profilbild">
 
 src="images/anime1.jpg"
 
-alt="">
+alt=""
+
+data-credit="Credits: SMIRKA / Character Owner">
 
 <img class="open-image"
 
 src="images/anime2.jpg"
 
-alt="">
+alt=""
+
+data-credit="Credits: SMIRKA / Character Owner">
 
 <img class="open-image"
 
 src="images/anime3.jpg"
 
-alt="">
+alt=""
+
+data-credit="Credits: SMIRKA / Character Owner">
 
 <img class="open-image"
 
 src="images/anime5.jpg"
 
-alt="">
+alt=""
+
+data-credit="Credits: SMIRKA / Character Owner">
 
 </div>
-
-<button class="see-more-btn">
-
-See more examples ✦
-
-</button>
 
 </div>
 
@@ -148,125 +168,15 @@ TOS, NDA und Extras.
 
 <div class="social-links">
 
-<a href="DEIN_TIKTOK_LINK" target="_blank">
+<a href="#">TikTok</a>
 
-TikTok
+<a href="#">Instagram</a>
 
-</a>
+<a href="#">Threads</a>
 
-<a href="DEIN_INSTAGRAM_LINK" target="_blank">
-
-Instagram
-
-</a>
-
-<a href="DEIN_THREADS_LINK" target="_blank">
-
-Threads
-
-</a>
-
-<a href="DEIN_DISCORD_LINK" target="_blank">
-
-Discord
-
-</a>
+<a href="#">Discord</a>
 
 </div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TOS -->
-
-<section id="tos" class="tab-page">
-
-<div class="content-card">
-
-<h2>TOS</h2>
-
-<img class="tos-image"
-
-src="images/tos.png"
-
-alt="TOS PNG">
-
-<ul>
-
-<li>Payment before final render.</li>
-
-<li>No refunds after sketch approval.</li>
-
-<li>Personal use only unless commercial rights are purchased.</li>
-
-<li>Credit is required when posting.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- PROCESS -->
-
-<section id="process" class="tab-page">
-
-<div class="content-card">
-
-<h2>Commission Process</h2>
-
-<div class="process-grid">
-
-<div class="process-card">
-
-<img src="images/sketch.jpg" alt="">
-
-<h3>Sketch</h3>
-
-</div>
-
-<div class="process-card">
-
-<img src="images/lineart.jpg" alt="">
-
-<h3>Lineart</h3>
-
-</div>
-
-<div class="process-card">
-
-<img src="images/render.jpg" alt="">
-
-<h3>Render</h3>
-
-</div>
-
-<div class="process-card">
-
-<img src="images/overlays.jpg" alt="">
-
-<h3>Overlays</h3>
-
-</div>
-
-<div class="process-card">
-
-<img src="images/details.jpg" alt="">
-
-<h3>Details</h3>
-
-</div>
-
-<div class="process-card">
-
-<img src="images/final.jpg" alt="">
-
-<h3>Final Touches</h3>
 
 </div>
 
@@ -284,43 +194,59 @@ alt="TOS PNG">
 
 <h2>Portfolio</h2>
 
+<h3 class="portfolio-title">
+
+Anime Style ✦
+
+</h3>
+
 <div class="portfolio-grid">
 
-<img class="portfolio-item"
+<img class="portfolio-item open-image"
 
 src="images/anime1.jpg"
 
-alt="">
+data-credit="Credits: SMIRKA">
 
-<img class="portfolio-item"
+<img class="portfolio-item open-image"
 
 src="images/anime2.jpg"
 
-alt="">
+data-credit="Credits: SMIRKA">
 
-<img class="portfolio-item"
+<img class="portfolio-item open-image"
 
 src="images/anime3.jpg"
 
-alt="">
+data-credit="Credits: SMIRKA">
 
-<img class="portfolio-item"
+</div>
+
+<h3 class="portfolio-title second-title">
+
+Realism Style ✦
+
+</h3>
+
+<div class="portfolio-grid">
+
+<img class="portfolio-item open-image"
 
 src="images/realismus.jpg"
 
-alt="">
+data-credit="Credits: SMIRKA">
 
-<img class="portfolio-item"
+<img class="portfolio-item open-image"
 
 src="images/realismus1.jpg"
 
-alt="">
+data-credit="Credits: SMIRKA">
 
-<img class="portfolio-item"
+<img class="portfolio-item open-image"
 
 src="images/semi3.jpg"
 
-alt="">
+data-credit="Credits: SMIRKA">
 
 </div>
 
@@ -328,105 +254,47 @@ alt="">
 
 </section>
 
-<!-- PRICES -->
+<!-- PROCESS -->
 
-<section id="prices" class="tab-page">
+<section id="process" class="tab-page">
 
 <div class="content-card">
 
-<h2>Prices</h2>
+<h2>Commission Process</h2>
 
-<div class="price-grid">
+<div class="process-block">
 
-<div class="price-card">
+<div class="process-grid">
 
-<h3>Illustration</h3>
+<div class="process-card">
 
-<p class="price">ab 30€</p>
+<img class="open-image" src="images/sketch.jpg" data-credit="Sketch by SMIRKA">
 
-</div>
-
-<div class="price-card">
-
-<h3>Semi realism</h3>
-
-<p class="price">ab 70€</p>
+<h3>Sketch</h3>
 
 </div>
 
-<div class="price-card">
+<div class="process-card">
 
-<h3>Fullbody</h3>
+<img class="open-image" src="images/lineart.jpg" data-credit="Lineart by SMIRKA">
 
-<p class="price">ab 120€</p>
-
-</div>
-
-<div class="price-card">
-
-<h3>Extras</h3>
-
-<p class="price">nach Aufwand</p>
+<h3>Lineart</h3>
 
 </div>
 
-</div>
+<div class="process-card">
+
+<img class="open-image" src="images/render.jpg" data-credit="Render by SMIRKA">
+
+<h3>Render</h3>
 
 </div>
 
-</section>
+<div class="process-card">
 
-<!-- SOON -->
+<img class="open-image" src="images/compositing.jpg" data-credit="Compositing by SMIRKA">
 
-<section id="soon" class="tab-page">
-
-<div class="content-card">
-
-<h2>SOON ✦</h2>
-
-<div class="soon-grid">
-
-<div class="soon-card">
-
-<h3>Discord Server</h3>
-
-<p>
-
-A community server with
-
-events, updates and sneak peeks
-
-is currently in development.
-
-</p>
-
-</div>
-
-<div class="soon-card">
-
-<h3>Webtoon</h3>
-
-<p>
-
-A personal webtoon project
-
-is currently being developed.
-
-</p>
-
-</div>
-
-<div class="soon-card">
-
-<h3>Patreon</h3>
-
-<p>
-
-Patreon with exclusive content
-
-and behind the scenes is coming soon.
-
-</p>
+<h3>Compositing</h3>
 
 </div>
 
@@ -434,69 +302,83 @@ and behind the scenes is coming soon.
 
 </div>
 
-</section>
+<div class="process-block">
 
-<!-- COFFEE -->
+<div class="process-grid">
 
-<section id="coffee" class="tab-page">
+<div class="process-card">
 
-<div class="content-card coffee-card">
+<img class="open-image" src="images/sketch.jpg">
 
-<h2>Buy Me A Coffee ✦</h2>
-
-<p>
-
-If you want to support my art journey,
-
-you can donate here ♡
-
-</p>
-
-<a class="coffee-button"
-
-href="DEIN_PAYPAL_LINK"
-
-target="_blank">
-
-Support via PayPal
-
-</a>
+<h3>Sketch</h3>
 
 </div>
 
-</section>
+<div class="process-card">
 
-<!-- ABOUT -->
+<img class="open-image" src="images/lineart.jpg">
 
-<section id="about" class="tab-page">
+<h3>Lineart</h3>
 
-<div class="content-card about-layout">
+</div>
 
-<img class="about-pic"
+<div class="process-card">
 
-src="images/profile.jpg"
+<img class="open-image" src="images/render.jpg">
 
-alt="">
+<h3>Render</h3>
 
-<div>
+</div>
 
-<h2>About Me</h2>
+<div class="process-card">
 
-<p>
+<img class="open-image" src="images/compositing.jpg">
 
-Hi, my name is SMIRKA,
+<h3>Compositing</h3>
 
-Digital Artist und Freelancer.
+</div>
 
-Im 19 years old and I still go to school.
+</div>
 
-</p>
+</div>
 
-<img class="small-gif"
+<div class="process-block">
 
-src="images/gif star.gif"
+<div class="process-grid">
 
-alt="GIF">
+<div class="process-card">
+
+<img class="open-image" src="images/sketch.jpg">
+
+<h3>Sketch</h3>
+
+</div>
+
+<div class="process-card">
+
+<img class="open-image" src="images/lineart.jpg">
+
+<h3>Lineart</h3>
+
+</div>
+
+<div class="process-card">
+
+<img class="open-image" src="images/render.jpg">
+
+<h3>Render</h3>
+
+</div>
+
+<div class="process-card">
+
+<img class="open-image" src="images/compositing.jpg">
+
+<h3>Compositing</h3>
+
+</div>
+
+</div>
 
 </div>
 
@@ -514,7 +396,7 @@ alt="GIF">
 
 <div class="nda-stage">
 
-<div class="magic-particles"></div>
+<div class="nda-glow"></div>
 
 <div class="nda-orbit orbit-one"></div>
 
@@ -522,13 +404,17 @@ alt="GIF">
 
 <div class="nda-orbit orbit-three"></div>
 
+<div class="magic-particles"></div>
+
 <div class="nda-scroll">
 
 <div class="scroll-rod top-rod"></div>
 
-<img src="images/NDA.jpg"
+<img class="open-image"
 
-alt="NDA Vertrag">
+src="images/NDA.jpg"
+
+data-credit="NDA Contract">
 
 <div class="scroll-rod bottom-rod"></div>
 
@@ -552,29 +438,31 @@ alt="NDA Vertrag">
 
 <div class="side-pngs">
 
-<img src="images/star1.png" alt="">
+<img class="floating-extra" src="images/star1.png">
 
-<img src="images/star2.png" alt="">
+<img class="floating-extra" src="images/star2.png">
 
-<img src="images/star3.png" alt="">
+<img class="floating-extra" src="images/star3.png">
 
 </div>
 
 <div class="center-card-png">
 
-<img src="images/karte.png"
+<img class="open-image floating-extra"
 
-alt="Extra Karte">
+src="images/karte.png"
+
+data-credit="Extra Card by SMIRKA">
 
 </div>
 
 <div class="side-pngs">
 
-<img src="images/star4.png" alt="">
+<img class="floating-extra" src="images/star4.png">
 
-<img src="images/star5.png" alt="">
+<img class="floating-extra" src="images/star5.png">
 
-<img src="images/star6.png" alt="">
+<img class="floating-extra" src="images/star6.png">
 
 </div>
 
@@ -587,6 +475,8 @@ alt="Extra Karte">
 </main>
 
 <script>
+
+/* TABS */
 
 const tabs = document.querySelectorAll(".tab-btn");
 
@@ -607,6 +497,48 @@ tab.classList.add("active");
 document.getElementById(target).classList.add("active");
 
 });
+
+});
+
+/* IMAGE MODAL */
+
+const modal = document.getElementById("imageModal");
+
+const modalImage = document.getElementById("modalImage");
+
+const modalCredit = document.getElementById("modalCredit");
+
+const closeModal = document.getElementById("closeModal");
+
+document.querySelectorAll(".open-image").forEach(image => {
+
+image.addEventListener("click", () => {
+
+modal.classList.add("active");
+
+modalImage.src = image.src;
+
+modalCredit.textContent =
+
+image.dataset.credit || "";
+
+});
+
+});
+
+closeModal.addEventListener("click", () => {
+
+modal.classList.remove("active");
+
+});
+
+modal.addEventListener("click", (e) => {
+
+if(e.target === modal){
+
+modal.classList.remove("active");
+
+}
 
 });
 
