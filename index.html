@@ -1,379 +1,641 @@
-<!DOCTYPE html>
+<!-- =========================
 
-<html lang="en">
+FULL HTML
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SMIRKA</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<!-- BACKGROUND -->
-
-<div class="floating-symbols">
-
-<span>✦</span>
-
-<span>✧</span>
-
-<span>★</span>
-
-<span>✦</span>
-
-<span>✧</span>
-
-<span>★</span>
-
-</div>
-
-<div class="shooting-star star-one"></div>
-
-<div class="shooting-star star-two"></div>
-
-<div class="shooting-star star-three"></div>
-
-<!-- MODAL -->
-
-<div class="image-modal" id="imageModal">
-
-<button class="close-modal" id="closeModal">✕</button>
-
-<div class="modal-content">
-
-<img id="modalImage" src="" alt="">
-
-<p id="modalCredit"></p>
-
-</div>
-
-</div>
-
-<!-- HEADER -->
+========================= -->
 
 <header class="top-header">
 
-<nav class="nav-tabs">
+  <nav class="nav-tabs">
 
-<button class="tab-btn active" data-tab="home">Home</button>
+    <button class="tab-btn active" data-tab="home">Home</button>
 
-<button class="tab-btn" data-tab="portfolio">Portfolio</button>
+    <button class="tab-btn" data-tab="portfolio">Portfolio</button>
 
-</nav>
+    <button class="tab-btn" data-tab="prices">Prices</button>
+
+    <button class="tab-btn" data-tab="process">Process</button>
+
+    <button class="tab-btn" data-tab="tos">TOS</button>
+
+    <button class="tab-btn" data-tab="nda">NDA</button>
+
+    <button class="tab-btn" data-tab="extras">Extras</button>
+
+    <button class="tab-btn" data-tab="soon">Soon</button>
+
+    <button class="tab-btn" data-tab="coffee">Buy me a coffee</button>
+
+    <button class="tab-btn" data-tab="about">About</button>
+
+  </nav>
 
 </header>
 
 <main>
 
-<!-- HOME -->
-
 <section id="home" class="tab-page active">
 
-<div class="home-layout">
+  <div class="home-layout">
 
-<div class="left-column">
+    <div class="left-column">
 
-<img class="main-art open-image"
+      <img class="main-art open-image"
 
-src="images/profilbild.jpg"
+      src="images/profilbild.jpg"
 
-alt=""
+      alt="Profilbild"
 
-data-credit="Profile art by SMIRKA">
+      data-credit="Profile art by: SMIRKA">
 
-</div>
+      <div class="portfolio-preview glass-box">
 
-<div class="right-column">
+        <h2>Portfolio ✦</h2>
 
-<div class="glass-box">
+        <div class="mini-grid">
 
-<h1>SMIRKA</h1>
+          <img class="open-image"
 
-<p>DIGITAL ARTIST · FREELANCER</p>
+          src="images/anime1.jpg"
 
-<a class="vgen-button"
+          alt=""
 
-href="https://vgen.co/Smirka"
+          data-credit="Credits: SMIRKA / Character Owner">
 
-target="_blank">
+          <img class="open-image"
 
-♡ COMMISSION ME ON VGEN ♡
+          src="images/anime2.jpg"
 
-</a>
+          alt=""
 
-<div class="social-links">
+          data-credit="Credits: SMIRKA / Character Owner">
 
-<a href="#">TikTok</a>
+          <img class="open-image"
 
-<a href="#">Instagram</a>
+          src="images/anime3.jpg"
 
-<a href="#">Threads</a>
+          alt=""
 
-<a href="#">Discord</a>
+          data-credit="Credits: SMIRKA / Character Owner">
 
-</div>
+          <img class="open-image"
 
-</div>
+          src="images/anime5.jpg"
 
-</div>
+          alt=""
 
-</div>
+          data-credit="Credits: SMIRKA / Character Owner">
+
+        </div>
+
+        <button class="see-more-btn"
+
+        data-tab-target="portfolio">
+
+        See more examples ✦
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="right-column">
+
+      <div class="title-area">
+
+        <h1>SMIRKA</h1>
+
+        <p>DIGITAL ARTIST · FREELANCER</p>
+
+      </div>
+
+      <a class="vgen-button"
+
+      href="https://vgen.co/Smirka"
+
+      target="_blank">
+
+      ♡ COMMISSION ME ON VGEN ♡
+
+      </a>
+
+      <div class="slots-box glass-box">
+
+        <h2>Commission Slots</h2>
+
+        <p class="slot-number">3 / 5 OPEN</p>
+
+        <p>Animations closed</p>
+
+      </div>
+
+      <div class="welcome-box glass-box">
+
+        <h3>Welcome to my art space ✦</h3>
+
+        <p>
+
+          Hier findest du mein Portfolio,
+
+          Preise, Commission Process,
+
+          TOS, NDA und Extras.
+
+        </p>
+
+        <div class="social-links">
+
+          <a href="DEIN_TIKTOK_LINK" target="_blank">
+
+          TikTok
+
+          </a>
+
+          <a href="DEIN_INSTAGRAM_LINK" target="_blank">
+
+          Instagram
+
+          </a>
+
+          <a href="DEIN_THREADS_LINK" target="_blank">
+
+          Threads
+
+          </a>
+
+          <a href="DEIN_DISCORD_LINK" target="_blank">
+
+          Discord
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
-<!-- PORTFOLIO -->
+<section id="tos" class="tab-page">
+
+  <div class="content-card">
+
+    <h2>TOS</h2>
+
+    <img class="tos-image"
+
+    src="images/tos.png"
+
+    alt="TOS PNG">
+
+    <ul>
+
+      <li>Payment before final render.</li>
+
+      <li>No refunds after sketch approval.</li>
+
+      <li>Personal use only unless commercial rights are purchased.</li>
+
+      <li>Credit is required when posting.</li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+<section id="process" class="tab-page">
+
+  <div class="content-card">
+
+    <h2>Commission Process</h2>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+
+        <img class="open-image"
+
+        src="images/sketch.jpg"
+
+        alt="">
+
+        <h3>Sketch</h3>
+
+      </div>
+
+      <div class="process-card">
+
+        <img class="open-image"
+
+        src="images/lineart.jpg"
+
+        alt="">
+
+        <h3>Lineart</h3>
+
+      </div>
+
+      <div class="process-card">
+
+        <img class="open-image"
+
+        src="images/render.jpg"
+
+        alt="">
+
+        <h3>Render</h3>
+
+      </div>
+
+      <div class="process-card">
+
+        <img class="open-image"
+
+        src="images/overlays.jpg"
+
+        alt="">
+
+        <h3>Overlays</h3>
+
+      </div>
+
+      <div class="process-card">
+
+        <img class="open-image"
+
+        src="images/details.jpg"
+
+        alt="">
+
+        <h3>Details</h3>
+
+      </div>
+
+      <div class="process-card">
+
+        <img class="open-image"
+
+        src="images/final.jpg"
+
+        alt="">
+
+        <h3>Final Touches</h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="soon" class="tab-page">
+
+  <div class="content-card">
+
+    <h2>SOON ✦</h2>
+
+    <div class="soon-grid">
+
+      <div class="soon-card">
+
+        <h3>Discord Server</h3>
+
+        <p>
+
+          A community server with
+
+          events, updates and sneak peeks
+
+          is currently in development.
+
+        </p>
+
+      </div>
+
+      <div class="soon-card">
+
+        <h3>Webtoon</h3>
+
+        <p>
+
+          A personal webtoon project
+
+          is currently being developed.
+
+        </p>
+
+      </div>
+
+      <div class="soon-card">
+
+        <h3>Patreon</h3>
+
+        <p>
+
+          Patreon with exclusive content
+
+          and behind the scenes is coming soon.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="coffee" class="tab-page">
+
+  <div class="content-card coffee-card">
+
+    <h2>Buy Me A Coffee ✦</h2>
+
+    <p>
+
+      If you want to support my art journey,
+
+      you can donate here ♡
+
+    </p>
+
+    <a class="coffee-button"
+
+    href="DEIN_PAYPAL_LINK"
+
+    target="_blank">
+
+    Support via PayPal
+
+    </a>
+
+  </div>
+
+</section>
 
 <section id="portfolio" class="tab-page">
 
-<div class="content-card">
+  <div class="content-card">
 
-<h2>Portfolio</h2>
+    <h2>Portfolio</h2>
 
-<div class="category-tabs">
+    <div class="category-tabs">
 
-<button class="category-btn active"
+      <button class="category-btn active"
 
-data-category="anime">
+      data-category="anime">
 
-Anime Style
+      Anime
 
-</button>
+      </button>
 
-<button class="category-btn"
+      <button class="category-btn"
 
-data-category="semi">
+      data-category="semi">
 
-Semi Realism
+      Semi Realismus
 
-</button>
+      </button>
 
-</div>
+      <button class="category-btn"
 
-<div class="portfolio-grid">
+      data-category="assets">
 
-<img class="portfolio-item anime open-image"
+      Assets
 
-src="images/anime1.jpg"
+      </button>
 
-alt=""
+    </div>
 
-data-credit="Credits: SMIRKA">
+    <div class="portfolio-grid">
 
-<img class="portfolio-item anime open-image"
+      <img class="portfolio-item anime open-image"
 
-src="images/anime2.jpg"
+      src="images/anime1.jpg"
 
-alt=""
+      alt="">
 
-data-credit="Credits: SMIRKA">
+      <img class="portfolio-item anime open-image"
 
-<img class="portfolio-item anime open-image"
+      src="images/anime2.jpg"
 
-src="images/anime3.jpg"
+      alt="">
 
-alt=""
+      <img class="portfolio-item anime open-image"
 
-data-credit="Credits: SMIRKA">
+      src="images/anime3.jpg"
 
-<img class="portfolio-item semi open-image"
+      alt="">
 
-src="images/semi1.jpg"
+      <img class="portfolio-item semi open-image"
 
-alt=""
+      src="images/realismus.jpg"
 
-data-credit="Credits: SMIRKA">
+      alt="">
 
-<img class="portfolio-item semi open-image"
+      <img class="portfolio-item semi open-image"
 
-src="images/semi2.jpg"
+      src="images/realismus1.jpg"
 
-alt=""
+      alt="">
 
-data-credit="Credits: SMIRKA">
+      <img class="portfolio-item semi open-image"
 
-<img class="portfolio-item semi open-image"
+      src="images/semi3.jpg"
 
-src="images/semi3.jpg"
+      alt="">
 
-alt=""
+      <img class="portfolio-item assets open-image"
 
-data-credit="Credits: SMIRKA">
+      src="images/assets1.jpg"
 
-</div>
+      alt="">
 
-</div>
+      <img class="portfolio-item assets open-image"
+
+      src="images/assets2.jpg"
+
+      alt="">
+
+      <img class="portfolio-item assets open-image"
+
+      src="images/assets3.jpg"
+
+      alt="">
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="prices" class="tab-page">
+
+  <div class="content-card">
+
+    <h2>Prices</h2>
+
+    <div class="price-grid">
+
+      <div class="price-card">
+
+        <h3>Illustration</h3>
+
+        <p class="price">ab 30€</p>
+
+      </div>
+
+      <div class="price-card">
+
+        <h3>Semi realism</h3>
+
+        <p class="price">ab 70€</p>
+
+      </div>
+
+      <div class="price-card">
+
+        <h3>Fullbody</h3>
+
+        <p class="price">ab 120€</p>
+
+      </div>
+
+      <div class="price-card">
+
+        <h3>Extras</h3>
+
+        <p class="price">nach Aufwand</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about" class="tab-page">
+
+  <div class="content-card about-layout">
+
+    <img class="about-pic open-image"
+
+    src="images/profile.jpg"
+
+    alt="">
+
+    <div>
+
+      <h2>About Me</h2>
+
+      <p>
+
+        Hi, my name is SMIRKA,
+
+        Digital Artist und Freelancer.
+
+        Im 19 years old and I still go to school.
+
+      </p>
+
+      <img class="small-gif"
+
+      src="images/gif star.gif"
+
+      alt="GIF">
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="nda" class="tab-page">
+
+  <div class="content-card nda-card">
+
+    <h2>NDA</h2>
+
+    <div class="nda-stage">
+
+      <div class="magic-particles"></div>
+
+      <div class="nda-orbit orbit-one"></div>
+
+      <div class="nda-orbit orbit-two"></div>
+
+      <div class="nda-orbit orbit-three"></div>
+
+      <div class="nda-scroll">
+
+        <div class="scroll-rod top-rod"></div>
+
+        <img class="open-image"
+
+        src="images/NDA.jpg"
+
+        alt="NDA Vertrag">
+
+        <div class="scroll-rod bottom-rod"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="extras" class="tab-page">
+
+  <div class="content-card">
+
+    <h2>Extras</h2>
+
+    <div class="extras-layout">
+
+      <div class="side-pngs">
+
+        <img src="images/star1.png" alt="">
+
+        <img src="images/star2.png" alt="">
+
+        <img src="images/star3.png" alt="">
+
+      </div>
+
+      <div class="center-card-png">
+
+        <img class="open-image"
+
+        src="images/karte.png"
+
+        alt="Extra Karte">
+
+      </div>
+
+      <div class="side-pngs">
+
+        <img src="images/star4.png" alt="">
+
+        <img src="images/star5.png" alt="">
+
+        <img src="images/star6.png" alt="">
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 </main>
-
-<script>
-
-/* TABS */
-
-const tabs =
-
-document.querySelectorAll(".tab-btn");
-
-const pages =
-
-document.querySelectorAll(".tab-page");
-
-tabs.forEach(tab => {
-
-tab.addEventListener("click", () => {
-
-const target =
-
-tab.dataset.tab;
-
-tabs.forEach(btn =>
-
-btn.classList.remove("active"));
-
-pages.forEach(page =>
-
-page.classList.remove("active"));
-
-tab.classList.add("active");
-
-document
-
-.getElementById(target)
-
-.classList.add("active");
-
-});
-
-});
-
-/* MODAL */
-
-const modal =
-
-document.getElementById("imageModal");
-
-const modalImage =
-
-document.getElementById("modalImage");
-
-const modalCredit =
-
-document.getElementById("modalCredit");
-
-const closeModal =
-
-document.getElementById("closeModal");
-
-document
-
-.querySelectorAll(".open-image")
-
-.forEach(image => {
-
-image.addEventListener("click", () => {
-
-modal.classList.add("active");
-
-modalImage.src = image.src;
-
-modalCredit.textContent =
-
-image.dataset.credit || "";
-
-});
-
-});
-
-function closeImageModal(){
-
-modal.classList.remove("active");
-
-}
-
-closeModal.addEventListener(
-
-"click",
-
-closeImageModal
-
-);
-
-modal.addEventListener("click", e => {
-
-if(e.target === modal){
-
-closeImageModal();
-
-}
-
-});
-
-/* PORTFOLIO SWITCH */
-
-const categoryButtons =
-
-document.querySelectorAll(".category-btn");
-
-const animeItems =
-
-document.querySelectorAll(".portfolio-item.anime");
-
-const semiItems =
-
-document.querySelectorAll(".portfolio-item.semi");
-
-categoryButtons.forEach(button => {
-
-button.addEventListener("click", () => {
-
-categoryButtons.forEach(btn =>
-
-btn.classList.remove("active"));
-
-button.classList.add("active");
-
-const category =
-
-button.dataset.category;
-
-if(category === "anime"){
-
-animeItems.forEach(item =>
-
-item.style.display = "block");
-
-semiItems.forEach(item =>
-
-item.style.display = "none");
-
-}
-
-if(category === "semi"){
-
-animeItems.forEach(item =>
-
-item.style.display = "none");
-
-semiItems.forEach(item =>
-
-item.style.display = "block");
-
-}
-
-});
-
-});
-
-</script>
-
-</body>
-
-</html>
