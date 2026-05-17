@@ -66,20 +66,6 @@
 
 <button class="tab-btn" data-tab="portfolio">Portfolio</button>
 
-<button class="tab-btn" data-tab="prices">Prices</button>
-
-<button class="tab-btn" data-tab="process">Process</button>
-
-<button class="tab-btn" data-tab="tos">TOS</button>
-
-<button class="tab-btn" data-tab="nda">NDA</button>
-
-<button class="tab-btn" data-tab="extras">Extras</button>
-
-<button class="tab-btn" data-tab="soon">Soon</button>
-
-<button class="tab-btn" data-tab="coffee">Coffee & About</button>
-
 </nav>
 
 </header>
@@ -98,53 +84,19 @@
 
 src="images/profilbild.jpg"
 
-data-credit="Profile art by: SMIRKA">
+alt=""
 
-<div class="portfolio-preview glass-box">
-
-<h2>Portfolio ✦</h2>
-
-<div class="mini-grid">
-
-<img class="open-image"
-
-src="images/anime1.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="open-image"
-
-src="images/anime2.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="open-image"
-
-src="images/anime3.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="open-image"
-
-src="images/anime4.jpg"
-
-data-credit="Credits: SMIRKA">
-
-</div>
-
-</div>
+data-credit="Profile art by SMIRKA">
 
 </div>
 
 <div class="right-column">
 
-<div class="title-area">
+<div class="glass-box">
 
 <h1>SMIRKA</h1>
 
 <p>DIGITAL ARTIST · FREELANCER</p>
-
-</div>
 
 <a class="vgen-button"
 
@@ -155,30 +107,6 @@ target="_blank">
 ♡ COMMISSION ME ON VGEN ♡
 
 </a>
-
-<div class="slots-box glass-box">
-
-<h2>Commission Slots</h2>
-
-<p class="slot-number">3 / 5 OPEN</p>
-
-<p>Animations closed</p>
-
-</div>
-
-<div class="welcome-box glass-box">
-
-<h3>Welcome to my art space ✦</h3>
-
-<p>
-
-Hier findest du mein Portfolio,
-
-Preise, Commission Process,
-
-TOS, NDA und Extras.
-
-</p>
 
 <div class="social-links">
 
@@ -234,11 +162,15 @@ Semi Realism
 
 src="images/anime1.jpg"
 
+alt=""
+
 data-credit="Credits: SMIRKA">
 
 <img class="portfolio-item anime open-image"
 
 src="images/anime2.jpg"
+
+alt=""
 
 data-credit="Credits: SMIRKA">
 
@@ -246,11 +178,15 @@ data-credit="Credits: SMIRKA">
 
 src="images/anime3.jpg"
 
+alt=""
+
 data-credit="Credits: SMIRKA">
 
 <img class="portfolio-item semi open-image"
 
 src="images/semi1.jpg"
+
+alt=""
 
 data-credit="Credits: SMIRKA">
 
@@ -258,11 +194,15 @@ data-credit="Credits: SMIRKA">
 
 src="images/semi2.jpg"
 
+alt=""
+
 data-credit="Credits: SMIRKA">
 
 <img class="portfolio-item semi open-image"
 
 src="images/semi3.jpg"
+
+alt=""
 
 data-credit="Credits: SMIRKA">
 
@@ -276,15 +216,23 @@ data-credit="Credits: SMIRKA">
 
 <script>
 
-const tabs = document.querySelectorAll(".tab-btn");
+/* TABS */
 
-const pages = document.querySelectorAll(".tab-page");
+const tabs =
+
+document.querySelectorAll(".tab-btn");
+
+const pages =
+
+document.querySelectorAll(".tab-page");
 
 tabs.forEach(tab => {
 
 tab.addEventListener("click", () => {
 
-const target = tab.dataset.tab;
+const target =
+
+tab.dataset.tab;
 
 tabs.forEach(btn =>
 
