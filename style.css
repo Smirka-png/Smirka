@@ -1,431 +1,935 @@
-<!DOCTYPE html>
+*{
 
-<html lang="en">
+margin:0;
 
-<head>
+padding:0;
 
-<meta charset="UTF-8">
+box-sizing:border-box;
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+}
 
-<title>SMIRKA</title>
+html{
 
-<link rel="stylesheet" href="style.css">
+scroll-behavior:smooth;
 
-</head>
+}
 
-<body>
+body{
 
-<!-- BACKGROUND -->
+min-height:100vh;
 
-<div class="floating-symbols">
+background:
 
-<span>✦</span>
+radial-gradient(circle at top right,
 
-<span>✧</span>
+rgba(255,120,60,0.23),
 
-<span>★</span>
+transparent 34%),
 
-<span>✦</span>
+radial-gradient(circle at top left,
 
-<span>✧</span>
+rgba(93,79,180,0.28),
 
-<span>★</span>
+transparent 32%),
 
-</div>
+radial-gradient(circle at bottom,
 
-<div class="shooting-star star-one"></div>
+rgba(255,180,105,0.08),
 
-<div class="shooting-star star-two"></div>
+transparent 40%),
 
-<div class="shooting-star star-three"></div>
+#05020d;
 
-<!-- MODAL -->
+color:#ffe0b4;
 
-<div class="image-modal" id="imageModal">
+font-family:Georgia,"Times New Roman",serif;
 
-<button class="close-modal" id="closeModal">✕</button>
+overflow-x:hidden;
 
-<div class="modal-content">
+}
 
-<img id="modalImage" src="" alt="">
+/* BACKGROUND */
 
-<p id="modalCredit"></p>
+body::before{
 
-</div>
+content:"";
 
-</div>
+position:fixed;
 
-<!-- HEADER -->
+inset:0;
 
-<header class="top-header">
+background-image:
 
-<nav class="nav-tabs">
+radial-gradient(#ffe0b4 1px, transparent 1px),
 
-<button class="tab-btn active" data-tab="home">Home</button>
+radial-gradient(#ffffff 1px, transparent 1px);
 
-<button class="tab-btn" data-tab="portfolio">Portfolio</button>
+background-size:42px 42px,110px 110px;
 
-<button class="tab-btn" data-tab="prices">Prices</button>
+background-position:0 0,35px 45px;
 
-<button class="tab-btn" data-tab="process">Process</button>
+opacity:0.12;
 
-<button class="tab-btn" data-tab="tos">TOS</button>
+pointer-events:none;
 
-<button class="tab-btn" data-tab="nda">NDA</button>
+z-index:-5;
 
-<button class="tab-btn" data-tab="extras">Extras</button>
+}
 
-<button class="tab-btn" data-tab="soon">Soon</button>
+/* FLOATING SYMBOLS */
 
-<button class="tab-btn" data-tab="coffee">Coffee & About</button>
+.floating-symbols{
 
-</nav>
+position:fixed;
 
-</header>
+inset:0;
 
-<main>
+pointer-events:none;
 
-<!-- HOME -->
+z-index:-2;
 
-<section id="home" class="tab-page active">
+overflow:hidden;
 
-<div class="home-layout">
+}
 
-<div class="left-column">
+.floating-symbols span{
 
-<img class="main-art open-image"
+position:absolute;
 
-src="images/profilbild.jpg"
+color:rgba(255,224,180,0.78);
 
-data-credit="Profile art by: SMIRKA">
+text-shadow:
 
-<div class="portfolio-preview glass-box">
+0 0 10px rgba(255,224,180,0.8),
 
-<h2>Portfolio ✦</h2>
+0 0 24px rgba(255,132,73,0.35);
 
-<div class="mini-grid">
+animation:floatSymbol 8s ease-in-out infinite;
 
-<img class="open-image"
+}
 
-src="images/anime1.jpg"
+.floating-symbols span:nth-child(1){
 
-data-credit="Credits: SMIRKA">
+top:8%;
 
-<img class="open-image"
+left:3%;
 
-src="images/anime2.jpg"
+font-size:2rem;
 
-data-credit="Credits: SMIRKA">
+}
 
-<img class="open-image"
+.floating-symbols span:nth-child(2){
 
-src="images/anime3.jpg"
+top:18%;
 
-data-credit="Credits: SMIRKA">
+right:8%;
 
-<img class="open-image"
+font-size:2.4rem;
 
-src="images/anime4.jpg"
+animation-delay:1s;
 
-data-credit="Credits: SMIRKA">
+}
 
-</div>
+.floating-symbols span:nth-child(3){
 
-</div>
+top:72%;
 
-</div>
+left:8%;
 
-<div class="right-column">
+font-size:1.8rem;
 
-<div class="title-area">
+animation-delay:2s;
 
-<h1>SMIRKA</h1>
+}
 
-<p>DIGITAL ARTIST · FREELANCER</p>
+.floating-symbols span:nth-child(4){
 
-</div>
+top:62%;
 
-<a class="vgen-button"
+right:12%;
 
-href="https://vgen.co/Smirka"
+font-size:2rem;
 
-target="_blank">
+animation-delay:3s;
 
-♡ COMMISSION ME ON VGEN ♡
+}
 
-</a>
+.floating-symbols span:nth-child(5){
 
-<div class="slots-box glass-box">
+top:42%;
 
-<h2>Commission Slots</h2>
+left:45%;
 
-<p class="slot-number">3 / 5 OPEN</p>
+font-size:1.7rem;
 
-<p>Animations closed</p>
+animation-delay:2s;
 
-</div>
+}
 
-<div class="welcome-box glass-box">
+.floating-symbols span:nth-child(6){
 
-<h3>Welcome to my art space ✦</h3>
+bottom:12%;
 
-<p>
+right:24%;
 
-Hier findest du mein Portfolio,
+font-size:2rem;
 
-Preise, Commission Process,
+animation-delay:4s;
 
-TOS, NDA und Extras.
+}
 
-</p>
+@keyframes floatSymbol{
 
-<div class="social-links">
+0%,100%{
 
-<a href="#">TikTok</a>
+transform:translateY(0) rotate(0deg);
 
-<a href="#">Instagram</a>
+opacity:0.55;
 
-<a href="#">Threads</a>
+}
 
-<a href="#">Discord</a>
+50%{
 
-</div>
+transform:translateY(-24px) rotate(12deg);
 
-</div>
+opacity:1;
 
-</div>
+}
 
-</div>
+}
 
-</section>
+/* SHOOTING STARS */
 
-<!-- PORTFOLIO -->
+.shooting-star{
 
-<section id="portfolio" class="tab-page">
+position:fixed;
 
-<div class="content-card">
+width:150px;
 
-<h2>Portfolio</h2>
+height:2px;
 
-<div class="category-tabs">
+background:
 
-<button class="category-btn active"
+linear-gradient(90deg,#fff1cd,transparent);
 
-data-category="anime">
+filter:drop-shadow(0 0 8px #fff1cd);
 
-Anime Style
+opacity:0;
 
-</button>
+z-index:-3;
 
-<button class="category-btn"
+pointer-events:none;
 
-data-category="semi">
+}
 
-Semi Realism
+.star-one{
 
-</button>
+top:18%;
 
-</div>
+right:-10%;
 
-<div class="portfolio-grid">
+animation:shooting 6s linear infinite;
 
-<img class="portfolio-item anime open-image"
+}
 
-src="images/anime1.jpg"
+.star-two{
 
-data-credit="Credits: SMIRKA">
+top:42%;
 
-<img class="portfolio-item anime open-image"
+right:-10%;
 
-src="images/anime2.jpg"
+animation:shooting 8s linear infinite 2s;
 
-data-credit="Credits: SMIRKA">
+}
 
-<img class="portfolio-item anime open-image"
+.star-three{
 
-src="images/anime3.jpg"
+top:70%;
 
-data-credit="Credits: SMIRKA">
+right:-10%;
 
-<img class="portfolio-item semi open-image"
+animation:shooting 10s linear infinite 4s;
 
-src="images/semi1.jpg"
+}
 
-data-credit="Credits: SMIRKA">
+@keyframes shooting{
 
-<img class="portfolio-item semi open-image"
+0%{
 
-src="images/semi2.jpg"
+transform:translate(0,0) rotate(-35deg);
 
-data-credit="Credits: SMIRKA">
+opacity:0;
 
-<img class="portfolio-item semi open-image"
+}
 
-src="images/semi3.jpg"
+8%{
 
-data-credit="Credits: SMIRKA">
+opacity:1;
 
-</div>
+}
 
-</div>
+25%{
 
-</section>
+transform:translate(-800px,520px) rotate(-35deg);
 
-</main>
+opacity:0;
 
-<script>
+}
 
-const tabs = document.querySelectorAll(".tab-btn");
+100%{
 
-const pages = document.querySelectorAll(".tab-page");
+opacity:0;
 
-tabs.forEach(tab => {
+}
 
-tab.addEventListener("click", () => {
+}
 
-const target = tab.dataset.tab;
+/* HEADER */
 
-tabs.forEach(btn =>
+.top-header{
 
-btn.classList.remove("active"));
+width:100%;
 
-pages.forEach(page =>
+padding:36px 20px 20px;
 
-page.classList.remove("active"));
+display:flex;
 
-tab.classList.add("active");
+justify-content:center;
 
-document
+position:relative;
 
-.getElementById(target)
+z-index:20;
 
-.classList.add("active");
+}
 
-});
+.nav-tabs{
 
-});
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
+
+width:min(1040px,94%);
+
+padding:14px 24px;
+
+border:1px solid rgba(255,224,180,0.28);
+
+border-radius:22px;
+
+background:rgba(8,4,20,0.78);
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+
+0 0 35px rgba(255,132,73,0.12),
+
+inset 0 0 20px rgba(255,255,255,0.03);
+
+}
+
+.tab-btn{
+
+border:none;
+
+background:transparent;
+
+color:#ffe0b4;
+
+font-family:inherit;
+
+font-size:0.9rem;
+
+font-weight:bold;
+
+letter-spacing:2.5px;
+
+text-transform:uppercase;
+
+cursor:pointer;
+
+padding:8px 10px;
+
+transition:0.3s ease;
+
+}
+
+.tab-btn:hover,
+
+.tab-btn.active{
+
+color:#ffffff;
+
+transform:scale(1.08);
+
+text-shadow:
+
+0 0 10px rgba(255,224,180,0.9),
+
+0 0 20px rgba(255,132,73,0.8);
+
+}
+
+/* MAIN */
+
+main{
+
+width:min(1420px,92%);
+
+margin:0 auto;
+
+padding:28px 0 80px;
+
+}
+
+.tab-page{
+
+display:none;
+
+min-height:calc(100vh - 130px);
+
+animation:fadePage 0.45s ease;
+
+}
+
+.tab-page.active{
+
+display:block;
+
+}
+
+@keyframes fadePage{
+
+from{
+
+opacity:0;
+
+transform:translateY(14px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* GLASS */
+
+.glass-box,
+
+.content-card{
+
+background:rgba(8,4,20,0.72);
+
+border:1px solid rgba(255,224,180,0.25);
+
+border-radius:28px;
+
+box-shadow:
+
+0 0 45px rgba(255,132,73,0.08),
+
+inset 0 0 22px rgba(255,255,255,0.025);
+
+backdrop-filter:blur(16px);
+
+overflow:hidden;
+
+}
+
+.content-card{
+
+width:min(1180px,100%);
+
+margin:0 auto;
+
+padding:46px;
+
+}
+
+/* HOME */
+
+.home-layout{
+
+display:grid;
+
+grid-template-columns:0.85fr 1.15fr;
+
+gap:64px;
+
+align-items:center;
+
+}
+
+.left-column,
+
+.right-column{
+
+display:flex;
+
+flex-direction:column;
+
+gap:28px;
+
+min-width:0;
+
+}
+
+.main-art{
+
+width:100%;
+
+height:560px;
+
+object-fit:cover;
+
+border-radius:48px;
+
+cursor:pointer;
+
+transition:0.35s ease;
+
+animation:profileFloat 5s ease-in-out infinite;
+
+}
+
+.main-art:hover{
+
+transform:scale(1.03);
+
+box-shadow:
+
+0 0 60px rgba(255,132,73,0.45),
+
+0 0 100px rgba(255,224,180,0.2);
+
+}
+
+@keyframes profileFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+.portfolio-preview{
+
+padding:28px 34px 34px;
+
+}
+
+.portfolio-preview h2,
+
+.content-card h2{
+
+font-size:2.2rem;
+
+margin-bottom:24px;
+
+color:#ffe5bd;
+
+text-shadow:
+
+0 0 18px rgba(255,132,73,0.45);
+
+}
+
+.mini-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:16px;
+
+}
+
+.mini-grid img{
+
+width:100%;
+
+height:170px;
+
+object-fit:cover;
+
+border-radius:14px;
+
+cursor:pointer;
+
+transition:0.3s ease;
+
+}
+
+.mini-grid img:hover{
+
+transform:scale(1.08) translateY(-6px);
+
+box-shadow:
+
+0 0 25px rgba(255,132,73,0.45);
+
+}
+
+/* TITLE */
+
+.title-area h1{
+
+font-size:clamp(4.8rem,10vw,8.8rem);
+
+line-height:0.9;
+
+word-break:break-word;
+
+}
+
+.title-area p{
+
+margin-top:20px;
+
+letter-spacing:12px;
+
+font-size:1.2rem;
+
+font-weight:bold;
+
+}
+
+/* BUTTON */
+
+.vgen-button{
+
+display:block;
+
+width:min(650px,100%);
+
+text-align:center;
+
+text-decoration:none;
+
+color:#0c0715;
+
+background:
+
+linear-gradient(90deg,#fff1c8,#ff8c58);
+
+padding:24px 34px;
+
+border-radius:22px;
+
+font-size:1.35rem;
+
+font-weight:bold;
+
+letter-spacing:5px;
+
+transition:0.3s ease;
+
+}
+
+.vgen-button:hover{
+
+transform:translateY(-5px) scale(1.03);
+
+box-shadow:
+
+0 0 50px rgba(255,132,73,0.75);
+
+}
+
+/* SOCIALS */
+
+.social-links{
+
+margin-top:28px;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+}
+
+.social-links a{
+
+text-align:center;
+
+text-decoration:none;
+
+color:#ffe0b4;
+
+padding:22px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.03);
+
+font-weight:bold;
+
+text-transform:uppercase;
+
+transition:0.3s ease;
+
+}
+
+.social-links a:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+
+0 0 24px rgba(255,132,73,0.35);
+
+}
+
+/* PORTFOLIO */
+
+.category-tabs{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+margin-bottom:30px;
+
+}
+
+.category-btn{
+
+padding:15px 25px;
+
+border:none;
+
+border-radius:999px;
+
+cursor:pointer;
+
+background:rgba(255,255,255,0.05);
+
+color:#ffe0b4;
+
+transition:0.3s;
+
+}
+
+.category-btn.active,
+
+.category-btn:hover{
+
+background:linear-gradient(90deg,#fff1c8,#ff8c58);
+
+color:black;
+
+transform:scale(1.05);
+
+}
+
+.portfolio-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+
+.portfolio-item{
+
+width:100%;
+
+height:320px;
+
+object-fit:cover;
+
+border-radius:22px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.portfolio-item:hover{
+
+transform:scale(1.04);
+
+box-shadow:
+
+0 0 30px rgba(255,132,73,0.45);
+
+}
+
+.portfolio-item.semi{
+
+display:none;
+
+}
 
 /* MODAL */
 
-const modal =
+.image-modal{
 
-document.getElementById("imageModal");
+position:fixed;
 
-const modalImage =
+inset:0;
 
-document.getElementById("modalImage");
+background:rgba(0,0,0,0.9);
 
-const modalCredit =
+backdrop-filter:blur(10px);
 
-document.getElementById("modalCredit");
+display:none;
 
-const closeModal =
+justify-content:center;
 
-document.getElementById("closeModal");
+align-items:center;
 
-document
+z-index:999;
 
-.querySelectorAll(".open-image")
-
-.forEach(image => {
-
-image.addEventListener("click", () => {
-
-modal.classList.add("active");
-
-modalImage.src = image.src;
-
-modalCredit.textContent =
-
-image.dataset.credit || "";
-
-});
-
-});
-
-function closeImageModal(){
-
-modal.classList.remove("active");
+padding:30px;
 
 }
 
-closeModal.addEventListener(
+.image-modal.active{
 
-"click",
-
-closeImageModal
-
-);
-
-modal.addEventListener("click", e => {
-
-if(e.target === modal){
-
-closeImageModal();
+display:flex;
 
 }
 
-});
+.modal-content{
 
-/* PORTFOLIO SWITCH */
+display:flex;
 
-const categoryButtons =
+flex-direction:column;
 
-document.querySelectorAll(".category-btn");
+align-items:center;
 
-const animeItems =
+gap:20px;
 
-document.querySelectorAll(".portfolio-item.anime");
-
-const semiItems =
-
-document.querySelectorAll(".portfolio-item.semi");
-
-categoryButtons.forEach(button => {
-
-button.addEventListener("click", () => {
-
-categoryButtons.forEach(btn =>
-
-btn.classList.remove("active"));
-
-button.classList.add("active");
-
-const category =
-
-button.dataset.category;
-
-if(category === "anime"){
-
-animeItems.forEach(item =>
-
-item.style.display = "block");
-
-semiItems.forEach(item =>
-
-item.style.display = "none");
+max-width:95vw;
 
 }
 
-if(category === "semi"){
+.image-modal img{
 
-animeItems.forEach(item =>
+max-width:90vw;
 
-item.style.display = "none");
+max-height:80vh;
 
-semiItems.forEach(item =>
+border-radius:20px;
 
-item.style.display = "block");
+box-shadow:
+
+0 0 40px rgba(255,132,73,0.6);
 
 }
 
-});
+#modalCredit{
 
-});
+background:rgba(255,255,255,0.05);
 
-</script>
+padding:12px 20px;
 
-</body>
+border-radius:999px;
 
-</html>
+text-align:center;
+
+}
+
+.close-modal{
+
+position:absolute;
+
+top:30px;
+
+right:30px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+font-size:2rem;
+
+cursor:pointer;
+
+background:rgba(255,255,255,0.08);
+
+color:white;
+
+transition:0.3s;
+
+}
+
+.close-modal:hover{
+
+transform:rotate(90deg) scale(1.1);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.home-layout{
+
+grid-template-columns:1fr;
+
+}
+
+.portfolio-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.portfolio-grid,
+
+.social-links,
+
+.mini-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.title-area h1{
+
+font-size:4rem;
+
+}
+
+.tab-page{
+
+padding:20px;
+
+}
+
+}
