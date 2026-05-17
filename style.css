@@ -1,1003 +1,617 @@
-/* =========================
+<!DOCTYPE html>
 
-FULL CSS
+<html lang="en">
 
-========================= */
+<head>
 
-*{
+<meta charset="UTF-8">
 
-box-sizing:border-box;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-margin:0;
+<title>SMIRKA</title>
 
-padding:0;
+<link rel="stylesheet" href="style.css">
 
-}
+</head>
 
-html{
+<body>
 
-scroll-behavior:smooth;
+<header class="top-header">
 
-}
+<nav class="nav-tabs">
 
-body{
+<button class="tab-btn active" data-tab="home">Home</button>
 
-min-height:100vh;
+<button class="tab-btn" data-tab="portfolio">Portfolio</button>
 
-background:
+<button class="tab-btn" data-tab="prices">Prices</button>
 
-radial-gradient(circle at top right,
+<button class="tab-btn" data-tab="process">Process</button>
 
-rgba(255,120,60,0.23),
+<button class="tab-btn" data-tab="tos">TOS</button>
 
-transparent 34%),
+<button class="tab-btn" data-tab="nda">NDA</button>
 
-radial-gradient(circle at top left,
+<button class="tab-btn" data-tab="extras">Extras</button>
 
-rgba(93,79,180,0.28),
+<button class="tab-btn" data-tab="soon">Soon</button>
 
-transparent 32%),
+<button class="tab-btn" data-tab="coffee">Buy me a coffee</button>
 
-#05020d;
+<button class="tab-btn" data-tab="about">About</button>
 
-color:#ffe0b4;
+</nav>
 
-font-family:Georgia,"Times New Roman",serif;
+</header>
 
-overflow-x:hidden;
+<main>
 
-}
+<!-- HOME -->
 
-/* HEADER */
+<section id="home" class="tab-page active">
 
-.top-header{
+<div class="home-layout">
 
-width:100%;
+<div class="left-column">
 
-padding:36px 20px 20px;
+<img class="main-art open-image"
 
-display:flex;
+src="images/profilbild.jpg"
 
-justify-content:center;
+alt="Profilbild">
 
-}
+<div class="portfolio-preview glass-box">
 
-.nav-tabs{
+<h2>Portfolio ✦</h2>
 
-display:flex;
+<div class="mini-grid">
 
-justify-content:center;
+<img class="open-image"
 
-flex-wrap:wrap;
+src="images/anime1.jpg"
 
-gap:18px;
+alt="">
 
-width:min(1040px,94%);
+<img class="open-image"
 
-padding:14px 24px;
+src="images/anime2.jpg"
 
-border:1px solid rgba(255,224,180,0.28);
+alt="">
 
-border-radius:22px;
+<img class="open-image"
 
-background:rgba(8,4,20,0.78);
+src="images/anime3.jpg"
 
-backdrop-filter:blur(18px);
+alt="">
 
-}
+<img class="open-image"
 
-.tab-btn{
+src="images/anime5.jpg"
 
-border:none;
+alt="">
 
-background:transparent;
+</div>
 
-color:#ffe0b4;
+<button class="see-more-btn">
 
-font-family:inherit;
+See more examples ✦
 
-font-size:0.9rem;
+</button>
 
-font-weight:bold;
+</div>
 
-letter-spacing:2px;
+</div>
 
-text-transform:uppercase;
+<div class="right-column">
 
-cursor:pointer;
+<div class="title-area">
 
-padding:8px 10px;
+<h1>SMIRKA</h1>
 
-transition:0.3s ease;
+<p>DIGITAL ARTIST · FREELANCER</p>
 
-}
+</div>
 
-.tab-btn:hover,
+<a class="vgen-button"
 
-.tab-btn.active{
+href="https://vgen.co/Smirka"
 
-color:#fff;
+target="_blank">
 
-text-shadow:
+♡ COMMISSION ME ON VGEN ♡
 
-0 0 10px rgba(255,224,180,0.9),
+</a>
 
-0 0 20px rgba(255,132,73,0.8);
+<div class="slots-box glass-box">
 
-}
+<h2>Commission Slots</h2>
 
-/* MAIN */
+<p class="slot-number">3 / 5 OPEN</p>
 
-main{
+<p>Animations closed</p>
 
-width:min(1420px,92%);
+</div>
 
-margin:0 auto;
+<div class="welcome-box glass-box">
 
-padding:28px 0 80px;
+<h3>Welcome to my art space ✦</h3>
 
-}
+<p>
 
-.tab-page{
+Hier findest du mein Portfolio,
 
-display:none;
+Preise, Commission Process,
 
-animation:fadePage 0.45s ease;
+TOS, NDA und Extras.
 
-}
+</p>
 
-.tab-page.active{
+<div class="social-links">
 
-display:block;
+<a href="DEIN_TIKTOK_LINK" target="_blank">
 
-}
+TikTok
 
-@keyframes fadePage{
+</a>
 
-from{
+<a href="DEIN_INSTAGRAM_LINK" target="_blank">
 
-opacity:0;
+Instagram
 
-transform:translateY(14px);
+</a>
 
-}
+<a href="DEIN_THREADS_LINK" target="_blank">
 
-to{
+Threads
 
-opacity:1;
+</a>
 
-transform:translateY(0);
+<a href="DEIN_DISCORD_LINK" target="_blank">
 
-}
+Discord
 
-}
+</a>
 
-/* HOME */
+</div>
 
-.home-layout{
+</div>
 
-display:grid;
+</div>
 
-grid-template-columns:0.85fr 1.15fr;
+</div>
 
-gap:64px;
+</section>
 
-align-items:center;
+<!-- TOS -->
 
-}
+<section id="tos" class="tab-page">
 
-.left-column,
+<div class="content-card">
 
-.right-column{
+<h2>TOS</h2>
 
-display:flex;
+<img class="tos-image"
 
-flex-direction:column;
+src="images/tos.png"
 
-gap:28px;
+alt="TOS PNG">
 
-}
+<ul>
 
-.main-art{
+<li>Payment before final render.</li>
 
-width:100%;
+<li>No refunds after sketch approval.</li>
 
-height:560px;
+<li>Personal use only unless commercial rights are purchased.</li>
 
-object-fit:cover;
+<li>Credit is required when posting.</li>
 
-border-radius:48px;
+</ul>
 
-border:1px solid rgba(255,224,180,0.25);
+</div>
 
-box-shadow:
+</section>
 
-0 0 45px rgba(255,132,73,0.25);
+<!-- PROCESS -->
 
-transition:0.35s ease;
+<section id="process" class="tab-page">
 
-}
+<div class="content-card">
 
-.glass-box,
+<h2>Commission Process</h2>
 
-.content-card{
+<div class="process-grid">
 
-background:rgba(8,4,20,0.72);
+<div class="process-card">
 
-border:1px solid rgba(255,224,180,0.25);
+<img src="images/sketch.jpg" alt="">
 
-border-radius:28px;
+<h3>Sketch</h3>
 
-backdrop-filter:blur(16px);
+</div>
 
-}
+<div class="process-card">
 
-.portfolio-preview{
+<img src="images/lineart.jpg" alt="">
 
-padding:28px 34px 34px;
+<h3>Lineart</h3>
 
-}
+</div>
 
-.portfolio-preview h2,
+<div class="process-card">
 
-.content-card h2{
+<img src="images/render.jpg" alt="">
 
-font-size:2.2rem;
+<h3>Render</h3>
 
-margin-bottom:24px;
+</div>
 
-}
+<div class="process-card">
 
-.mini-grid{
+<img src="images/overlays.jpg" alt="">
 
-display:grid;
+<h3>Overlays</h3>
 
-grid-template-columns:repeat(4,1fr);
+</div>
 
-gap:16px;
+<div class="process-card">
 
-}
+<img src="images/details.jpg" alt="">
 
-.mini-grid img{
+<h3>Details</h3>
 
-width:100%;
+</div>
 
-height:170px;
+<div class="process-card">
 
-object-fit:cover;
+<img src="images/final.jpg" alt="">
 
-border-radius:14px;
+<h3>Final Touches</h3>
 
-}
+</div>
 
-.see-more-btn{
+</div>
 
-margin-top:24px;
+</div>
 
-width:100%;
+</section>
 
-padding:16px 22px;
+<!-- PORTFOLIO -->
 
-border-radius:18px;
+<section id="portfolio" class="tab-page">
 
-border:none;
+<div class="content-card">
 
-background:linear-gradient(
+<h2>Portfolio</h2>
 
-90deg,
+<div class="portfolio-grid">
 
-#fff1c8,
+<img class="portfolio-item"
 
-#ff8c58
+src="images/anime1.jpg"
 
-);
+alt="">
 
-color:#0c0715;
+<img class="portfolio-item"
 
-font-weight:bold;
+src="images/anime2.jpg"
 
-cursor:pointer;
+alt="">
 
-}
+<img class="portfolio-item"
 
-.title-area h1{
+src="images/anime3.jpg"
 
-font-size:clamp(4.8rem,10vw,8.8rem);
+alt="">
 
-line-height:0.9;
+<img class="portfolio-item"
 
-}
+src="images/realismus.jpg"
 
-.title-area p{
+alt="">
 
-margin-top:20px;
+<img class="portfolio-item"
 
-letter-spacing:12px;
+src="images/realismus1.jpg"
 
-font-size:1.2rem;
+alt="">
 
-font-weight:bold;
+<img class="portfolio-item"
 
-}
+src="images/semi3.jpg"
 
-.vgen-button{
+alt="">
 
-display:block;
+</div>
 
-width:min(650px,100%);
+</div>
 
-text-align:center;
+</section>
 
-text-decoration:none;
+<!-- PRICES -->
 
-color:#0c0715;
+<section id="prices" class="tab-page">
 
-background:linear-gradient(
+<div class="content-card">
 
-90deg,
+<h2>Prices</h2>
 
-#fff1c8,
+<div class="price-grid">
 
-#ff8c58
+<div class="price-card">
 
-);
+<h3>Illustration</h3>
 
-padding:24px 34px;
+<p class="price">ab 30€</p>
 
-border-radius:22px;
+</div>
 
-font-size:1.2rem;
+<div class="price-card">
 
-font-weight:bold;
+<h3>Semi realism</h3>
 
-}
+<p class="price">ab 70€</p>
 
-.slots-box,
+</div>
 
-.welcome-box{
+<div class="price-card">
 
-padding:32px 36px;
+<h3>Fullbody</h3>
 
-}
+<p class="price">ab 120€</p>
 
-.slot-number{
+</div>
 
-font-size:2.8rem;
+<div class="price-card">
 
-font-weight:bold;
+<h3>Extras</h3>
 
-}
+<p class="price">nach Aufwand</p>
 
-.social-links{
+</div>
 
-margin-top:28px;
+</div>
 
-display:grid;
+</div>
 
-grid-template-columns:repeat(2,1fr);
+</section>
 
-gap:18px;
+<!-- SOON -->
 
-}
+<section id="soon" class="tab-page">
 
-.social-links a{
+<div class="content-card">
 
-text-align:center;
+<h2>SOON ✦</h2>
 
-text-decoration:none;
+<div class="soon-grid">
 
-color:#ffe0b4;
+<div class="soon-card">
 
-padding:22px;
+<h3>Discord Server</h3>
 
-border-radius:18px;
+<p>
 
-border:1px solid rgba(255,224,180,0.28);
+A community server with
 
-background:rgba(255,255,255,0.03);
+events, updates and sneak peeks
 
-font-weight:bold;
+is currently in development.
 
-transition:0.3s ease;
+</p>
 
-}
+</div>
 
-.social-links a:hover{
+<div class="soon-card">
 
-transform:translateY(-5px);
+<h3>Webtoon</h3>
 
-}
+<p>
 
-/* CONTENT */
+A personal webtoon project
 
-.content-card{
+is currently being developed.
 
-width:min(1180px,100%);
+</p>
 
-margin:0 auto;
+</div>
 
-padding:46px;
+<div class="soon-card">
 
-}
+<h3>Patreon</h3>
 
-.process-grid,
+<p>
 
-.price-grid,
+Patreon with exclusive content
 
-.soon-grid{
+and behind the scenes is coming soon.
 
-display:grid;
+</p>
 
-grid-template-columns:repeat(3,1fr);
+</div>
 
-gap:24px;
+</div>
 
-}
+</div>
 
-.process-card,
+</section>
 
-.price-card,
+<!-- COFFEE -->
 
-.soon-card{
+<section id="coffee" class="tab-page">
 
-padding:20px;
+<div class="content-card coffee-card">
 
-border-radius:22px;
+<h2>Buy Me A Coffee ✦</h2>
 
-border:1px solid rgba(255,224,180,0.25);
+<p>
 
-background:rgba(255,255,255,0.035);
+If you want to support my art journey,
 
-transition:0.3s ease;
+you can donate here ♡
 
-}
+</p>
 
-.process-card:hover,
+<a class="coffee-button"
 
-.price-card:hover,
+href="DEIN_PAYPAL_LINK"
 
-.soon-card:hover{
+target="_blank">
 
-transform:translateY(-8px);
+Support via PayPal
 
-}
+</a>
 
-.process-card img{
+</div>
 
-width:100%;
+</section>
 
-height:260px;
+<!-- ABOUT -->
 
-object-fit:cover;
+<section id="about" class="tab-page">
 
-border-radius:16px;
+<div class="content-card about-layout">
 
-}
+<img class="about-pic"
 
-/* PORTFOLIO */
+src="images/profile.jpg"
 
-.category-tabs{
+alt="">
 
-display:flex;
+<div>
 
-justify-content:center;
+<h2>About Me</h2>
 
-gap:16px;
+<p>
 
-margin-bottom:34px;
+Hi, my name is SMIRKA,
 
-flex-wrap:wrap;
+Digital Artist und Freelancer.
 
-}
+Im 19 years old and I still go to school.
 
-.category-btn{
+</p>
 
-padding:14px 24px;
+<img class="small-gif"
 
-border-radius:999px;
+src="images/gif star.gif"
 
-border:none;
+alt="GIF">
 
-background:rgba(255,255,255,0.05);
+</div>
 
-color:#ffe0b4;
+</div>
 
-font-weight:bold;
+</section>
 
-cursor:pointer;
+<!-- NDA -->
 
-}
+<section id="nda" class="tab-page">
 
-.portfolio-grid{
+<div class="content-card nda-card">
 
-display:grid;
+<h2>NDA</h2>
 
-grid-template-columns:repeat(3,1fr);
+<div class="nda-stage">
 
-gap:22px;
+<div class="magic-particles"></div>
 
-}
+<div class="nda-orbit orbit-one"></div>
 
-.portfolio-item{
+<div class="nda-orbit orbit-two"></div>
 
-width:100%;
+<div class="nda-orbit orbit-three"></div>
 
-height:330px;
+<div class="nda-scroll">
 
-object-fit:cover;
+<div class="scroll-rod top-rod"></div>
 
-border-radius:22px;
+<img src="images/NDA.jpg"
 
-}
+alt="NDA Vertrag">
 
-/* TOS */
+<div class="scroll-rod bottom-rod"></div>
 
-.tos-image{
+</div>
 
-width:min(400px,100%);
+</div>
 
-display:block;
+</div>
 
-margin:0 auto 30px;
+</section>
 
-border-radius:24px;
+<!-- EXTRAS -->
 
-}
+<section id="extras" class="tab-page">
 
-/* COFFEE */
+<div class="content-card">
 
-.coffee-card{
+<h2>Extras</h2>
 
-text-align:center;
+<div class="extras-layout">
 
-}
+<div class="side-pngs">
 
-.coffee-button{
+<img src="images/star1.png" alt="">
 
-display:inline-block;
+<img src="images/star2.png" alt="">
 
-margin-top:30px;
+<img src="images/star3.png" alt="">
 
-padding:20px 34px;
+</div>
 
-border-radius:18px;
+<div class="center-card-png">
 
-text-decoration:none;
+<img src="images/karte.png"
 
-color:#0c0715;
+alt="Extra Karte">
 
-font-weight:bold;
+</div>
 
-background:linear-gradient(
+<div class="side-pngs">
 
-90deg,
+<img src="images/star4.png" alt="">
 
-#fff1c8,
+<img src="images/star5.png" alt="">
 
-#ff8c58
+<img src="images/star6.png" alt="">
 
-);
+</div>
 
-}
+</div>
 
-/* ABOUT */
+</div>
 
-.about-layout{
+</section>
 
-display:grid;
+</main>
 
-grid-template-columns:300px 1fr;
+<script>
 
-gap:36px;
+const tabs = document.querySelectorAll(".tab-btn");
 
-align-items:center;
+const pages = document.querySelectorAll(".tab-page");
 
-}
+tabs.forEach(tab => {
 
-.about-pic{
+tab.addEventListener("click", () => {
 
-width:300px;
+const target = tab.dataset.tab;
 
-height:300px;
+tabs.forEach(btn => btn.classList.remove("active"));
 
-object-fit:cover;
+pages.forEach(page => page.classList.remove("active"));
 
-border-radius:36px;
+tab.classList.add("active");
 
-}
+document.getElementById(target).classList.add("active");
 
-/* NDA */
+});
 
-.nda-card{
+});
 
-overflow:hidden;
+</script>
 
-position:relative;
+</body>
 
-}
-
-.nda-stage{
-
-position:relative;
-
-min-height:720px;
-
-display:grid;
-
-place-items:center;
-
-}
-
-.nda-orbit{
-
-position:absolute;
-
-border-radius:50%;
-
-border:1px solid rgba(255,224,180,0.16);
-
-animation:orbitSpin 14s linear infinite;
-
-}
-
-.orbit-one{
-
-width:620px;
-
-height:620px;
-
-}
-
-.orbit-two{
-
-width:760px;
-
-height:360px;
-
-}
-
-.orbit-three{
-
-width:900px;
-
-height:900px;
-
-opacity:0.3;
-
-animation-duration:28s;
-
-}
-
-@keyframes orbitSpin{
-
-to{
-
-rotate:360deg;
-
-}
-
-}
-
-.magic-particles::before,
-
-.magic-particles::after{
-
-content:"✦ ✧ ✦ ✧ ✦";
-
-position:absolute;
-
-width:100%;
-
-text-align:center;
-
-font-size:2rem;
-
-animation:magicMove 10s linear infinite;
-
-}
-
-.magic-particles::after{
-
-top:80%;
-
-animation-delay:5s;
-
-}
-
-@keyframes magicMove{
-
-0%{
-
-transform:translateY(0);
-
-opacity:0;
-
-}
-
-50%{
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(-80px);
-
-opacity:0;
-
-}
-
-}
-
-.nda-scroll{
-
-position:relative;
-
-z-index:2;
-
-width:min(680px,92%);
-
-padding:38px 30px;
-
-border-radius:28px;
-
-background:linear-gradient(
-
-90deg,
-
-#8d552a,
-
-#ffe9bd 14%,
-
-#fff7de 50%,
-
-#ffe0a8 86%,
-
-#8d552a
-
-);
-
-animation:epicNdaFloat 6s ease-in-out infinite;
-
-}
-
-.nda-scroll img{
-
-width:100%;
-
-display:block;
-
-border-radius:18px;
-
-}
-
-.scroll-rod{
-
-position:absolute;
-
-left:-28px;
-
-right:-28px;
-
-height:34px;
-
-border-radius:999px;
-
-background:linear-gradient(
-
-90deg,
-
-#5f3519,
-
-#e9a65a,
-
-#fff0c8,
-
-#e9a65a,
-
-#5f3519
-
-);
-
-}
-
-.top-rod{
-
-top:-18px;
-
-}
-
-.bottom-rod{
-
-bottom:-18px;
-
-}
-
-@keyframes epicNdaFloat{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-24px);
-
-}
-
-}
-
-/* EXTRAS */
-
-.extras-layout{
-
-display:grid;
-
-grid-template-columns:160px 1fr 160px;
-
-gap:38px;
-
-align-items:center;
-
-}
-
-.side-pngs{
-
-display:grid;
-
-gap:22px;
-
-}
-
-.side-pngs img{
-
-width:100%;
-
-aspect-ratio:1;
-
-object-fit:contain;
-
-}
-
-.center-card-png{
-
-display:grid;
-
-place-items:center;
-
-}
-
-.center-card-png img{
-
-width:min(520px,100%);
-
-}
-
-/* RESPONSIVE */
-
-@media (max-width:1050px){
-
-.home-layout{
-
-display:flex;
-
-flex-direction:column;
-
-}
-
-.process-grid,
-
-.price-grid,
-
-.portfolio-grid,
-
-.soon-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.extras-layout{
-
-grid-template-columns:1fr;
-
-}
-
-.about-layout{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-@media (max-width:650px){
-
-main{
-
-width:94%;
-
-}
-
-.nav-tabs{
-
-gap:8px;
-
-padding:12px;
-
-}
-
-.tab-btn{
-
-font-size:0.75rem;
-
-}
-
-.title-area h1{
-
-font-size:4rem;
-
-}
-
-.social-links,
-
-.process-grid,
-
-.price-grid,
-
-.portfolio-grid,
-
-.soon-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.content-card{
-
-padding:28px;
-
-}
-
-.main-art{
-
-height:380px;
-
-}
-
-.about-pic{
-
-width:100%;
-
-height:auto;
-
-}
-
-.orbit-one{
-
-width:300px;
-
-height:300px;
-
-}
-
-.orbit-two{
-
-width:340px;
-
-height:180px;
-
-}
-
-.orbit-three{
-
-width:420px;
-
-height:420px;
-
-}
-
-}
+</html>
