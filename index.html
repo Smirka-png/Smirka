@@ -52,6 +52,8 @@
 
 </div>
 
+<!-- HEADER -->
+
 <header class="top-header">
 
 <nav class="nav-tabs">
@@ -228,8 +230,6 @@ Semi Realism
 
 <div class="portfolio-grid">
 
-<!-- ANIME -->
-
 <img class="portfolio-item anime open-image"
 
 src="images/anime1.jpg"
@@ -248,44 +248,6 @@ src="images/anime3.jpg"
 
 data-credit="Credits: SMIRKA">
 
-<img class="portfolio-item anime open-image"
-
-src="images/anime4.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item anime open-image"
-
-src="images/anime5.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item anime open-image"
-
-src="images/anime6.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item anime open-image"
-
-src="images/anime7.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item anime open-image"
-
-src="images/anime8.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item anime open-image"
-
-src="images/anime9.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<!-- SEMI -->
-
 <img class="portfolio-item semi open-image"
 
 src="images/semi1.jpg"
@@ -301,42 +263,6 @@ data-credit="Credits: SMIRKA">
 <img class="portfolio-item semi open-image"
 
 src="images/semi3.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item semi open-image"
-
-src="images/semi4.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item semi open-image"
-
-src="images/semi5.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item semi open-image"
-
-src="images/semi6.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item semi open-image"
-
-src="images/semi7.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item semi open-image"
-
-src="images/semi8.jpg"
-
-data-credit="Credits: SMIRKA">
-
-<img class="portfolio-item semi open-image"
-
-src="images/semi9.jpg"
 
 data-credit="Credits: SMIRKA">
 
@@ -394,164 +320,124 @@ data-credit="Credits: SMIRKA">
 
 </section>
 
-<!-- TOS -->
+</main>
 
-<section id="tos" class="tab-page">
+<script>
 
-<div class="content-card">
+/* TABS */
 
-<h2>TOS</h2>
+const tabs = document.querySelectorAll(".tab-btn");
 
-<img class="tos-image"
+const pages = document.querySelectorAll(".tab-page");
 
-src="images/tos.png"
+tabs.forEach(tab => {
 
-alt="TOS PNG">
+tab.addEventListener("click", () => {
 
-<ul>
+const target = tab.dataset.tab;
 
-<li>Payment before final render.</li>
+tabs.forEach(btn => btn.classList.remove("active"));
 
-<li>No refunds after sketch approval.</li>
+pages.forEach(page => page.classList.remove("active"));
 
-<li>Personal use only unless commercial rights are purchased.</li>
+tab.classList.add("active");
 
-<li>Credit is required when posting.</li>
+document.getElementById(target).classList.add("active");
 
-</ul>
+});
 
-</div>
+});
 
-</section>
+/* IMAGE MODAL */
 
-<!-- PROCESS -->
+const modal = document.getElementById("imageModal");
 
-<section id="process" class="tab-page">
+const modalImage = document.getElementById("modalImage");
 
-<div class="content-card">
+const modalCredit = document.getElementById("modalCredit");
 
-<h2>Commission Process</h2>
+const closeModal = document.getElementById("closeModal");
 
-<div class="process-block">
+document.querySelectorAll(".open-image").forEach(image => {
 
-<div class="process-grid">
+image.addEventListener("click", () => {
 
-<div class="process-card">
+modal.classList.add("active");
 
-<img class="open-image" src="images/sketch.jpg" data-credit="Sketch by SMIRKA">
+modalImage.src = image.src;
 
-<h3>Sketch</h3>
+modalCredit.textContent =
 
-</div>
+image.dataset.credit || "";
 
-<div class="process-card">
+});
 
-<img class="open-image" src="images/lineart.jpg" data-credit="Lineart by SMIRKA">
+});
 
-<h3>Lineart</h3>
+closeModal.addEventListener("click", () => {
 
-</div>
+modal.classList.remove("active");
 
-<div class="process-card">
+});
 
-<img class="open-image" src="images/render.jpg" data-credit="Render by SMIRKA">
+/* PORTFOLIO SWITCH */
 
-<h3>Render</h3>
+const categoryButtons =
 
-</div>
+document.querySelectorAll(".category-btn");
 
-<div class="process-card">
+const animeItems =
 
-<img class="open-image" src="images/compositing.jpg" data-credit="Compositing by SMIRKA">
+document.querySelectorAll(".portfolio-item.anime");
 
-<h3>Compositing</h3>
+const semiItems =
 
-</div>
+document.querySelectorAll(".portfolio-item.semi");
 
-</div>
+categoryButtons.forEach(button => {
 
-</div>
+button.addEventListener("click", () => {
 
-<div class="process-block">
+categoryButtons.forEach(btn =>
 
-<div class="process-grid">
+btn.classList.remove("active"));
 
-<div class="process-card">
+button.classList.add("active");
 
-<img class="open-image" src="images/sketch.jpg">
+const category =
 
-<h3>Sketch</h3>
+button.dataset.category;
 
-</div>
+if(category === "anime"){
 
-<div class="process-card">
+animeItems.forEach(item =>
 
-<img class="open-image" src="images/lineart.jpg">
+item.style.display = "block");
 
-<h3>Lineart</h3>
+semiItems.forEach(item =>
 
-</div>
+item.style.display = "none");
 
-<div class="process-card">
+}
 
-<img class="open-image" src="images/render.jpg">
+if(category === "semi"){
 
-<h3>Render</h3>
+animeItems.forEach(item =>
 
-</div>
+item.style.display = "none");
 
-<div class="process-card">
+semiItems.forEach(item =>
 
-<img class="open-image" src="images/compositing.jpg">
+item.style.display = "block");
 
-<h3>Compositing</h3>
+}
 
-</div>
+});
 
-</div>
+});
 
-</div>
+</script>
 
-<div class="process-block">
+</body>
 
-<div class="process-grid">
-
-<div class="process-card">
-
-<img class="open-image" src="images/sketch.jpg">
-
-<h3>Sketch</h3>
-
-</div>
-
-<div class="process-card">
-
-<img class="open-image" src="images/lineart.jpg">
-
-<h3>Lineart</h3>
-
-</div>
-
-<div class="process-card">
-
-<img class="open-image" src="images/render.jpg">
-
-<h3>Render</h3>
-
-</div>
-
-<div class="process-card">
-
-<img class="open-image" src="images/compositing.jpg">
-
-<h3>Compositing</h3>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+</html>
