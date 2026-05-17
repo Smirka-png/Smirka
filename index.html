@@ -40,7 +40,7 @@
 
 <div class="shooting-star star-three"></div>
 
-<!-- IMAGE MODAL -->
+<!-- MODAL -->
 
 <div class="image-modal" id="imageModal">
 
@@ -276,8 +276,6 @@ data-credit="Credits: SMIRKA">
 
 <script>
 
-/* TABS */
-
 const tabs = document.querySelectorAll(".tab-btn");
 
 const pages = document.querySelectorAll(".tab-page");
@@ -308,7 +306,7 @@ document
 
 });
 
-/* IMAGE MODAL */
+/* MODAL */
 
 const modal =
 
@@ -342,23 +340,13 @@ modalCredit.textContent =
 
 image.dataset.credit || "";
 
-document.body.style.overflow =
-
-"hidden";
-
 });
 
 });
-
-/* CLOSE */
 
 function closeImageModal(){
 
 modal.classList.remove("active");
-
-document.body.style.overflow =
-
-"auto";
 
 }
 
