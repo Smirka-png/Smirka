@@ -864,7 +864,7 @@ rotate:360deg;
 
 .magic-particles::after{
 
-content:"✦ ✧ ✦ ✧ ✦";
+content:" ";
 
 position:absolute;
 
