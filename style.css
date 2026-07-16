@@ -649,7 +649,7 @@ h1 {
 }
 
 .status-open {
-  color: #ffd09c;
+  color: #93C572;
 
   background: rgba(255, 156, 101, 0.07);
 
@@ -659,7 +659,7 @@ h1 {
 }
 
 .status-waitlist {
-  color: #ddc4ff;
+  color: #FFA500;
 
   background: rgba(170, 109, 255, 0.07);
 
@@ -669,7 +669,7 @@ h1 {
 }
 
 .status-closed {
-  color: #ff9eac;
+  color: #DC143C;
 
   background: rgba(255, 91, 113, 0.07);
 
